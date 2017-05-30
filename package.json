@@ -1,0 +1,24 @@
+{
+  "name": "landingAM4",
+  "version": "1.0.0",
+  "description": "First HTML task",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Ramaniuk@bitbucket.org/Ramaniuk/landingam4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Ramaniuk/landingam4#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-watch": "^4.3.11",
+    "node-static": "^0.7.9"
+  }
+}
