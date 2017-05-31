@@ -2,10 +2,44 @@
 @header-logo-width: 2.85 * @header-height;
 @header-menu-size: 50px;
 @color-default: #30b5d8;
+@color-grey: #ededed;
+@color-grey-light: #f6f6f6;
+@font-light: 'Open Sans Light';
+@font-regular: 'Open Sans';
+@font-bold: 'Open Sans Bold';
+@font-extra-bold: 'Open Sans Extra Bold';
+
+@font-face {
+  font-family: "Open Sans Light";
+  src: url(../fonts/OpenSans-Light.woff) format('woff');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url(../fonts/OpenSans-Bold.woff) format('woff');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Open Sans Extra Bold";
+  src: url(../fonts/OpenSans-ExtraBold.woff) format('woff');
+  font-weight: normal;
+  font-style: normal
+}
 
 html {
   height: 100%;
-  font: normal 16px "Helvetica Neue", sans-serif;
+  font: normal 16px "Open Sans", sans-serif;
 }
 
 body {
@@ -23,10 +57,8 @@ body {
 }
 
 .capter_title {
+  font: normal 40px @font-extra-bold, sans-serif;
   margin: 0;
-  padding: 10px;
-  font-size: 30px;
-  font-weight: 600;
 }
 
 .clearfix:after {
@@ -79,7 +111,7 @@ body {
     }
 
     .nav_link {
-      padding: 0px 20px;
+      padding: 0 10px 0 20px;
       display: inline-block;
 
       &:hover {
@@ -93,11 +125,11 @@ body {
   .nav_btn {
     padding: 10px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 19px;
     border: 0;
     text-transform: uppercase;
     float: right;
-    margin-top: 14px;
+    margin-top: 15px;
   }
 
   .login {
@@ -121,9 +153,10 @@ body {
   .search_button {
     display: inline-block;
     position: relative;
+    margin-left: 20px;
     width: @header-height;
     height: @header-height;
-    background-color: grey;
+    background-color: @color-grey;
 
     &:before {
       position: absolute;
@@ -192,14 +225,11 @@ body {
 
 .slides {
   position: relative;
-  //transform: scaleY(0.9);
   z-index: 0;
-  //overflow: hidden;
 
   .main_slide {
     height: 10%;
     width: 100%;
-    //transform: scale(1, 0.9) translate(0, -38px);
   }
 
   &:before {
@@ -212,23 +242,19 @@ body {
     background-image: url('../img/decor.png');
     background-repeat: no-repeat;
   }
-
-  //.decor_main_slide {
-  //  position: absolute;
-  //  bottom: 0%;
-  //  z-index: 1;
-  //}
 }
 
 .news {
   font-size: 24px;
 
   .sort_news {
+    font-family: @font-light;
     float: right;
-    margin: 30px 35px 0 0;
+    margin: 30px 23px 0 0;
 
     .sort_news_btn {
-      padding: 10px 20px;
+      font-family: @font-light;
+      padding: 10px 18px;
       font-size: 24px;
       border: 0;
       border-radius: 3px;
@@ -240,6 +266,8 @@ body {
       }
 
       &[data-active="true"] {
+        font-family: @font-bold;
+        font-size: 25px;
         font-weight: 600;
         background-color: #f0cb59;
       }
@@ -250,22 +278,36 @@ body {
   .news_title {
     margin: 60px 0 0 40px;
 
+    hr {
+      color: @color-grey;
+      border: 2px solid @color-grey-light;
+      width: 100%;
+      font-size: 0;
+    }
+
     .news_title_name {
       .capter_title;
+      display: inline-block;
+      margin: -15px 0 0 25px;
     }
+
     .news_title_all {
-      font-size: 20px;
+      vertical-align: top;
+      margin-left: 31px;
+      font-size: 18px;
       color: @color-default;
-      border-bottom: dashed 1px blue;
+      border-bottom: dashed 1px @color-default;
       text-decoration: none;
     }
+
     .news_select_type {
-      font-size: 26px;
-      padding-left: 20px;
+      font-size: 25px;
+      font-family: @font-light;
+      padding: 0 2px 5px 20px;
       display: inline-block;
       color: @color-default;
       float: right;
-      margin: -7px 30px 0 0;
+      margin: -10px 15px 0 0;
       border: 0;
       outline: 0;
       box-shadow: none;
