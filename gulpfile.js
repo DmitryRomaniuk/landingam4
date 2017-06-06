@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var livereload = require('gulp-livereload');
 var path = require('path');
+var staticNode = require('node-static');
+var file = new staticNode.Server('./public');
 
 livereload({ start: true });
 
@@ -16,7 +18,18 @@ gulp.task('less', function () {
 
 gulp.task('watch', function() {
     livereload.listen({port: 8080});
+    gulp.watch('./public/index.html', function () {
+        livereload.reload('./public/index.html');
+    });
     gulp.watch('./src/styles/*.less', ['less']);
 });
 
 gulp.task('default', ['watch', 'less']);
+
+require('http').createServer(function (request, response) {
+    request.addListener('end', function () {
+        file.serve(request, response);
+    }).resume();
+}).listen(8080);
+
+console.log('local server started');

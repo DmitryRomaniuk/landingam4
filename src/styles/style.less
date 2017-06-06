@@ -82,6 +82,37 @@ body {
   height: 0;
 }
 
+.carousel-indicators {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+
+  li {
+    @size: 15px;
+    display: inline-block;
+    width: @size;
+    height: @size;
+    margin: 1px 10px 1px 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000;
+    opacity: 0.4;
+    border: 0 solid #fff;
+    border-radius: @size;
+  }
+  li.active {
+    background-color: #000;
+    opacity: 0.8;
+  }
+}
+
+
 .header {
   width: 100%;
   margin: 0;
@@ -366,7 +397,6 @@ body {
     hr {
       color: @color-grey;
       border: 2px solid @color-grey-light;
-      width: 100%;
       font-size: 0;
     }
 
@@ -454,35 +484,340 @@ body {
 }
 
 .games {
-  width: 95%;
+  position: relative;
   background-color: #399084;
-  margin-left: 5%;
+  margin-left: 70px;
   padding: 0;
   border-top: solid 1px transparent;
 
-  .games_title {
-    margin: 20px;
+  .games_left_decor {
+    position: absolute;
+    float: left;
+    left: -100px;
+    top: 23px;
+    width: 100px;
+    height: 100%;
+    background-color: #2a8075;
+    transform: skewY(-25deg);
+  }
 
-    .games_title_name {
-      .capter_title;
-      color: white;
-      margin: -15px 0 0 25px;
+  .games_head {
+    margin-top: 20px;
+
+    .games_title {
+      display: inline-block;
+      margin: 20px;
+
+      .games_title_name {
+        .capter_title;
+        color: white;
+        margin: -15px 0 0 25px;
+      }
+
+      .games_title_all {
+        .capter_title_all;
+        color: white;
+        border-bottom: dashed 1px white;
+      }
     }
 
-    .games_title_all {
-      .capter_title_all;
-      color: white;
-      border-bottom: dashed 1px white;
+    .games-turn {
+      margin: 15px 0 0 25px;
+      float: right;
+      display: inline-block;
+      cursor: pointer;
+
+      .games-turn-decor() {
+        position: absolute;
+        display: inline-block;
+        width: 10px;
+        border: 2px solid white;
+      }
+
+      .games-turn-left {
+        position: relative;
+        margin: 1px;
+        float: left;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        opacity: 0.2;
+
+        &:before {
+          .games-turn-decor();
+          content: '';
+          top: 38%;
+          left: 35%;
+          transform: skewY(-45deg);
+        }
+
+        &:after {
+          .games-turn-decor();
+          content: '';
+          top: 62%;
+          left: 35%;
+          transform: skewY(45deg);
+        }
+      }
+
+      .games-turn-right {
+        position: relative;
+        margin: 1px;
+        background-color: black;
+        opacity: 0.8;
+        float: right;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+
+        &:before {
+          .games-turn-decor();
+          content: '';
+          top: 38%;
+          right: 35%;
+          transform: skewY(45deg);
+        }
+
+        &:after {
+          .games-turn-decor();
+          content: '';
+          top: 62%;
+          right: 35%;
+          transform: skewY(-45deg);
+        }
+      }
     }
   }
 
-  .games_left_decor {
+  .game_main {
+    font-size: 0;
+    border-bottom: 1px solid transparent;
+
+    .game_block_preview_wrapper {
+      margin: 20px auto 100px;
+      width: 1200px;
+    }
+
+    img {
+      float: left;
+      border-bottom: 4px solid red;
+    }
+
+    .game_block_preview {
+      position: relative;
+      display: inline-block;
+      background-color: white;
+      width: 50%;
+      font-size: 16px;
+
+      .game_block_preview_img_wrapper {
+        overflow: hidden;
+        display: inline-block;
+        float: left;
+      }
+
+      .game_block_preview_title {
+        display: inline-block;
+        font-family: @font-bold;
+        font-size: 30px;
+        margin: 10px;
+      }
+
+      .game_block_preview_platform {
+        font-family: @font-regular;
+        display: inline-block;
+      }
+
+      .game_block_preview_description {
+        font-family: @font-regular;
+        margin: 10px 20px 20px 20px;
+      }
+
+      .game_block_preview_rating {
+        float: right;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        background-color: @color-yellow;
+        font-family: @font-extra-bold;
+        font-size: 30px;
+        line-height: 80px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.trailers {
+  position: relative;
+  background-color: #eae7d6;
+  margin-left: 70px;
+  padding: 0;
+  border-top: solid 1px transparent;
+
+  .trailers_left_decor {
+    position: absolute;
     float: left;
-    margin: 20px 0 0 -6%;
-    width: 6%;
-    height: 100px;
-    background-color: #2a8075;
+    left: -100px;
+    top: 23px;
+    width: 100px;
+    height: 100%;
+    background-color: #dfdccb;
     transform: skewY(-25deg);
+  }
+
+  .trailers_head {
+    margin-top: 20px;
+
+    .trailers_title {
+      display: inline-block;
+      margin: 20px;
+
+      .trailers_title_name {
+        .capter_title;
+        text-transform: uppercase;
+        color: black;
+        margin: -15px 0 0 25px;
+      }
+
+      .trailers_title_all {
+        .capter_title_all;
+        color: @color-default;
+        border-bottom: dashed 1px @color-default
+      }
+    }
+
+
+    .trailers-turn {
+      margin: 15px 0 0 25px;
+      float: right;
+      display: inline-block;
+      cursor: pointer;
+
+      .trailers-turn-decor() {
+        position: absolute;
+        display: inline-block;
+        width: 10px;
+        border: 2px solid white;
+      }
+
+      .trailers-turn-left {
+        position: relative;
+        margin: 1px;
+        float: left;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        opacity: 0.2;
+
+        &:before {
+          .trailers-turn-decor();
+          content: '';
+          top: 38%;
+          left: 35%;
+          transform: skewY(-45deg);
+        }
+
+        &:after {
+          .trailers-turn-decor();
+          content: '';
+          top: 62%;
+          left: 35%;
+          transform: skewY(45deg);
+        }
+      }
+
+      .trailers-turn-right {
+        position: relative;
+        margin: 1px;
+        background-color: black;
+        opacity: 0.8;
+        float: right;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+
+        &:before {
+          .trailers-turn-decor();
+          content: '';
+          top: 38%;
+          right: 35%;
+          transform: skewY(45deg);
+        }
+
+        &:after {
+          .trailers-turn-decor();
+          content: '';
+          top: 62%;
+          right: 35%;
+          transform: skewY(-45deg);
+        }
+      }
+    }
+  }
+
+  .trailers_main {
+    font-size: 0;
+    border-bottom: 1px solid transparent;
+
+    .trailers_block_preview_wrapper {
+      margin: 20px auto 100px;
+      width: 1200px;
+    }
+
+    img {
+      float: left;
+      border-bottom: 4px solid red;
+    }
+
+    .trailer_block_preview {
+      position: relative;
+      display: inline-block;
+      background-color: white;
+      width: 50%;
+      font-size: 16px;
+
+      .trailer_block_preview_img_wrapper {
+        overflow: hidden;
+        display: inline-block;
+        float: left;
+      }
+
+      .trailer_block_preview_title {
+        display: inline-block;
+        font-family: @font-bold;
+        font-size: 30px;
+        margin: 10px;
+      }
+
+      .trailer_block_preview_platform {
+        font-family: @font-regular;
+        display: inline-block;
+      }
+
+      .trailer_block_preview_description {
+        font-family: @font-regular;
+        margin: 10px 20px 20px 20px;
+      }
+
+      .trailer_block_preview_rating {
+        float: right;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        background-color: @color-yellow;
+        font-family: @font-extra-bold;
+        font-size: 30px;
+        line-height: 80px;
+        text-align: center;
+      }
+    }
   }
 }
 
