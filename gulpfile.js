@@ -32,4 +32,4 @@ require('http').createServer(function (request, response) {
     }).resume();
 }).listen(8080);
 
-console.log('local server started');
+console.log('local server started on http://localhost:8080');
