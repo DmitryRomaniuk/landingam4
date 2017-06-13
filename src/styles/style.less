@@ -648,6 +648,15 @@ body {
     overflow: hidden;
     float: left;
 
+    &:hover {
+      .description-bubble {
+        display: block
+      }
+      .news_slides_second_description {
+        display: none;
+      }
+    }
+
     img {
       width: 100%;
     }
@@ -1033,6 +1042,7 @@ body {
           top: 0;
           left: 0;
           background-color: red;
+          z-index: 1;
 
           &::after {
             content: '';
@@ -1059,6 +1069,21 @@ body {
             left: 40px;
             bottom: 25px;
           }
+        }
+      }
+
+      &:hover {
+        .trailer_block_preview_play {
+          background-color: @color-yellow;
+          cursor: pointer;
+        }
+        .trailer_block_preview_hover_color {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: blueviolet;
+          opacity: 0.5;
+          cursor: pointer;
         }
       }
 
@@ -1129,18 +1154,22 @@ body {
   height: 150px;
   text-align: center;
   font-family: sans-serif;
-  display: table;
   z-index: 100;
+  display: none;
+
+  .description-bubble-wrapper {
+    display: table;
+    height: 100%;
+  }
 
   p {
-    position: relative;
     display: table-cell;
     vertical-align: middle;
+    position: relative;
     color: black;
     padding: 10px;
     font-family: @font-regular;
     font-size: 26px;
-    height: 80px;
     text-align: left;
   }
 
@@ -1155,12 +1184,11 @@ body {
 
 .description-bubble-top-small {
   position: absolute;
-  top: 120px;
-  height: 200px;
+  top: 30%;
+  height: 70%;
   left: 0;
 
   .decor_line {
-    bottom: 160px;
     left: 10px;
   }
 }
@@ -1170,7 +1198,7 @@ body {
   top: 0;
   left: 50%;
   width: 50%;
-  height: 320px;
+  height: 100%;
 }
 
 .description-bubble-top-large {
@@ -1178,7 +1206,7 @@ body {
   top: 50%;
   left: 0;
   width: 100%;
-  height: 320px;
+  height: 50%;
 
   .decor_line {
     bottom: 205px;
@@ -1202,12 +1230,16 @@ body {
   margin-top: -15px;
 }
 
+.decor_line_text {
+  position: relative;
+}
+
 .decor_line_text:after {
   content: '';
   display: inline-block;
   position: absolute;
-  top: 90px;
-  left: 10px;
+  top: -10px;
+  left: 0;
   height: 0;
   width: 100px;
   border: 3px solid #f0cb59;
