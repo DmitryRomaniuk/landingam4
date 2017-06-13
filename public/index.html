@@ -28,26 +28,26 @@
   <input type="radio" name="slide_switch" id="id1-img-slider"/>
   <img src="img/slides/slide1.jpg"/>
   <label for="id1-img-slider">
-    <img src="img/slides/slide1_s.jpg" width="160"/>
+    <img src="img/slides/slide1_s.jpg"/>
   </label>
   <input type="radio" name="slide_switch" id="id2-img-slider"/>
   <label for="id2-img-slider">
-    <img src="img/slides/slide2_s.jpg" width="160"/>
+    <img src="img/slides/slide2_s.jpg"/>
   </label>
   <img src="img/slides/slide2.jpg"/>
   <input type="radio" name="slide_switch" id="id3-img-slider"/>
   <label for="id3-img-slider">
-    <img src="img/slides/slide3_s.jpg" width="160"/>
+    <img src="img/slides/slide3_s.jpg"/>
   </label>
   <img src="img/slides/slide3.jpg"/>
   <input type="radio" name="slide_switch" id="id4-img-slider"/>
   <label for="id4-img-slider">
-    <img src="img/slides/slide4_s.jpg" width="160"/>
+    <img src="img/slides/slide4_s.jpg"/>
   </label>
   <img src="img/slides/slide4.jpg"/>
   <input type="radio" name="slide_switch" id="id5-img-slider"/>
   <label for="id5-img-slider">
-    <img src="img/slides/slide5_s.jpg" width="160"/>
+    <img src="img/slides/slide5_s.jpg"/>
   </label>
   <img src="img/slides/slide5.jpg"/>
   <div class="slide_preview_description"><span class="slide_preview_description_title">Lorem ipsum dolor sit amet,
@@ -62,16 +62,17 @@
   </div>
 </div>
 
-<div class="container news clearfix">
-
-  <div class="news_title clearfix">
-    <span class="news_title_name">НОВОСТИ</span>
-    <a class="news_title_all" href="#" alt="all news">Все&nbsp;новости</a>
-    <div class="sort_news clearfix"><span>Сортировать:</span>
+<div class="container news">
+  <div class="clearfix">
+    <div class="sort_news"><span class="sort_news_sort_by">Сортировать:</span>
       <button class="sort_news_btn" data-active="true">Популярные</button>
       <button class="sort_news_btn">Новые</button>
     </div>
-    <select class="news_select_type clearfix">
+  </div>
+  <div class="news_title">
+    <span class="news_title_name">НОВОСТИ</span>
+    <a class="news_title_all" href="#" alt="all news">Все&nbsp;новости</a>
+    <select class="news_select_type">
       <option>Все</option>
       <option>Гонки</option>
       <option>Квесты</option>
@@ -80,15 +81,14 @@
       <option>Симуляторы</option>
       <option>Логические</option>
     </select>
-
+    <hr>
   </div>
-  <hr>
   <div class="news_slides clearfix">
-    <div class="group_blocks">
+    <div class="group_blocks_row">
       <div class="news_slides_wrapper_img">
-        <img src="img/news/news1.jpg" width="800" height="320" alt="fast car">
+        <img src="img/news/news1.jpg" alt="fast car">
         <div class="news_slides_main_description">
-          <span>Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</span>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <hr class="decor_line"/>
         </div>
       </div>
@@ -100,66 +100,73 @@
         </div>
       </div>
     </div>
-    <div class="group_blocks">
-      <div class="news_slides_wrapper_img">
-        <img src="img/news/news2.jpg">
-        <div class="news_slides_second_description">Lorem ipsum dolor sit
-          <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-          <hr class="decor_line"/>
+    <div class="group_blocks_row">
+      <div class="group_blocks group_blocks_2">
+
+        <div class="news_slides_wrapper_img">
+          <img src="img/news/news2.jpg">
+          <div class="news_slides_second_description">Lorem ipsum dolor sit
+            <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+            <hr class="decor_line"/>
+          </div>
+          <div class="description-bubble description-bubble-top description-bubble-top-large">
+            <p class="description-bubble_text">
+              <strong class="news_slides_second_description-font-bold">Lorem</strong> ipsum dolor sit amet, consectetur
+              adipiscing
+              elit.
+            </p>
+            <hr class="decor_line"/>
+          </div>
         </div>
-        <div class="description-bubble description-bubble-top description-bubble-top-large">
-          <p class="">
-            <strong class="news_slides_second_description-font-bold">Lorem</strong> ipsum dolor sit amet, consectetur
-            adipiscing
-            elit.
-          </p>
-          <hr class="decor_line"/>
+        <div class="news_slides_wrapper_img">
+          <img src="img/news/news3.jpg">
+          <div class="news_slides_second_description">Lorem ipsum dolor sit
+            <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+            <hr class="decor_line"/>
+          </div>
         </div>
       </div>
-      <div class="news_slides_wrapper_img">
-        <img src="img/news/news3.jpg">
-        <div class="news_slides_second_description">Lorem ipsum dolor sit
-          <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-          <hr class="decor_line"/>
-        </div>
-      </div>
-    </div>
-    <div class="news_slides_wrapper_img">
-      <img src="img/news/news5.jpg">
-      <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
-        <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-      </div>
-      <div class="description-bubble description-bubble-left description-bubble-top-middle">
-        <p><span class="decor_line_text">
+      <div class="group_blocks group_blocks_3">
+        <div class="news_slides_wrapper_img">
+          <img src="img/news/news5.jpg">
+          <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
+            <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+          </div>
+          <div class="description-bubble description-bubble-left description-bubble-top-middle">
+            <p><span class="decor_line_text">
             <strong class="news_slides_second_description-font-bold">Lorem</strong> ipsum dolor sit amet,
             consectetur adipiscing elit.
             </span>
-        </p>
+            </p>
+          </div>
+        </div>
+        <div class="group_blocks group_blocks_4">
+          <div class="news_slides_wrapper_img">
+            <img src="img/news/news6.jpg">
+            <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
+              <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+            </div>
+            <div class="description-bubble description-bubble-top description-bubble-top-small">
+              <p class="">
+                <strong class="news_slides_second_description-font-bold">Lorem</strong> ipsum dolor sit amet,
+                consectetur
+                adipiscing
+                elit.
+              </p>
+              <hr class="decor_line"/>
+            </div>
+          </div>
+          <div class="news_slides_wrapper_img">
+            <img src="img/news/news7.jpg">
+            <div class="news_slides_second_description">Lorem ipsum dolor sit
+              <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+              <hr class="decor_line"/>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="group_blocks">
-      <div class="news_slides_wrapper_img">
-        <img src="img/news/news6.jpg">
-        <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
-          <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-        </div>
-        <div class="description-bubble description-bubble-top description-bubble-top-small">
-          <p class="">
-            <strong class="news_slides_second_description-font-bold">Lorem</strong> ipsum dolor sit amet, consectetur
-            adipiscing
-            elit.
-          </p>
-          <hr class="decor_line"/>
-        </div>
-      </div>
-      <div class="news_slides_wrapper_img">
-        <img src="img/news/news7.jpg">
-        <div class="news_slides_second_description">Lorem ipsum dolor sit
-          <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-          <hr class="decor_line"/>
-        </div>
-      </div>
-    </div>
+
   </div>
   <div class="add_more">
     <button class="add_more_button">Подгрузить еще</button>
@@ -168,10 +175,10 @@
 <div class="games">
   <div class="games_left_decor"></div>
   <div class="container">
-    <div class="games_head">
+    <div class="games_head clearfix">
       <div class="games_title">
         <span class="games_title_name">Игры</span>
-        <a class="games_title_all" href="#" alt="all news">Весь каталог</a>
+        <a class="games_title_all" href="#" alt="all news">Весь&nbsp;каталог</a>
       </div>
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0"></li>
@@ -247,10 +254,10 @@
 <div class="trailers">
   <div class="trailers_left_decor"></div>
   <div class="container">
-    <div class="trailers_head">
+    <div class="trailers_head clearfix">
       <div class="trailers_title">
         <span class="trailers_title_name">Трейлеры</span>
-        <a class="trailers_title_all" href="#" alt="all news">Весь каталог</a>
+        <a class="trailers_title_all" href="#" alt="all news">Весь&nbsp;каталог</a>
       </div>
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0"></li>
@@ -273,8 +280,10 @@
             </div>
             <img src="img/trailers/trailer1.jpg" width="330" height="190">
           </div>
+          <span>
           <span class="trailer_block_preview_title">Lorem ipsum</span><br><br>
           <span class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</span>
+            </span>
         </div>
         <div class="trailer_block_preview">
           <div class="trailer_block_preview_img_wrapper">
