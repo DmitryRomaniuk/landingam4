@@ -1,3 +1,4 @@
+@import "style_fonts";
 @header-height: 70px;
 @header-logo-width: 2.85 * @header-height;
 @header-menu-size: 50px;
@@ -234,13 +235,29 @@ body {
     }
 
     .nav_link {
-      padding: 0 15px;
       display: inline-block;
 
       &:hover {
         color: white;
         background-color: grey;
         cursor: pointer;
+      }
+
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        margin: 0 15px;
+        text-decoration: none;
+
+        &:active {
+          color: black;
+          text-decoration: none;
+        }
+        &:visited {
+          color: black;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -284,22 +301,17 @@ body {
   }
 
   .search_button {
-    display: inline-block;
     position: relative;
-    margin-left: 20px;
+    display: none;
+    float: none;
+    top: -2px;
+    margin: 0 0 0 20px;
     width: @header-height;
     height: @header-height;
     background-color: @color-grey;
 
-    &:before {
-      position: absolute;
-      color: white;
-      transform: translate(10%, 10%) scale(0.6);
-      width: @header-height;
-      height: @header-height;
-      content: '';
-      background-image: url('../img/icons/search.png');
-      background-repeat: no-repeat;
+    @media (min-width: 1200px) {
+      display: inline-block;
     }
   }
 }
@@ -737,6 +749,10 @@ body {
     margin-top: 20px;
     text-align: center;
 
+    @media(min-width: 768px){
+      text-align: left;
+    }
+
     .games_title {
       display: inline-block;
       margin: 20px;
@@ -924,6 +940,10 @@ body {
   .trailers_head {
     margin-top: 20px;
     text-align: center;
+
+    @media(min-width: 768px){
+      text-align: left;
+    }
 
     .trailers_title {
       display: inline-block;
@@ -1382,42 +1402,20 @@ body {
           position: absolute;
           color: black;
           font-size: 12px;
+          font-family: @font-bold;
           float: left;
           bottom: 10px;
-          left: 30px;
-
-          &:before {
-            position: absolute;
-            content: '';
-            left: -20px;
-            width: 100px;
-            height: 100px;
-            transform: skew(0.5);
-            background-image: url('../img/icons/rocket.png');
-            background-size: 20%;
-            background-repeat: no-repeat;
-          }
+          left: 10px;
         }
 
         .article_block_preview_count_comment {
           position: absolute;
           color: black;
           font-size: 12px;
+          font-family: @font-bold;
           float: left;
           bottom: 10px;
-          left: 70px;
-
-          &:before {
-            position: absolute;
-            content: '';
-            left: -20px;
-            top: 3px;
-            width: 15px;
-            height: 15px;
-            background-image: url('../img/icons/comments.png');
-            background-size: 100%;
-            background-repeat: no-repeat;
-          }
+          left: 40px;
         }
       }
 
@@ -1494,6 +1492,14 @@ footer {
     @footer-icon-size: 50px;
     @footer-icon-background: 100%;
 
+    a {
+      text-decoration: none;
+      
+      &:visited {
+        text-decoration: none;
+      }
+    }
+
     @media(min-width: 768px){
       width: 40%;
       margin-left: 100px;
@@ -1535,12 +1541,18 @@ footer {
     .icon() {
       position: relative;
       top: -10px;
+      text-align: center;
       display: inline-block;
+      color: white;
+      font-size: 40px;
       height: 0.8 * @footer-icon-size;
       width: 0.8 * @footer-icon-size;
-      background-position: center;
-      background-size: @footer-icon-background;
       background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .running_icon {
@@ -1555,33 +1567,36 @@ footer {
 
     .twitter_icon {
       .icon();
-      background-image: url('../img/icons/twitter.png');
     }
 
     .facebook_icon {
       .icon();
-      background-image: url('../img/icons/facebook.png');
     }
 
     .ball_icon {
       .icon();
+      top: -15px;
+      font-size: 30px;
       background-size: 0.8 * @footer-icon-background;
       background-color: fuchsia;
       border-radius: 4px;
-      background-image: url('../img/icons/ball.png');
     }
 
     .google_icon {
       .icon();
-      background-image: url('../img/icons/google-plus.png');
     }
 
-    .leaf_icon {
+    .linkedin_icon {
       .icon();
+      // top: -5px;
       background-size: 0.8 * @footer-icon-background;
-      background-color: forestgreen;
+      // background-color: blue;
       border-radius: 4px;
-      background-image: url('../img/icons/leaf.png');
+
+      // .icon-linkedin {
+      //   position: relative;
+      //   top:-5px;
+      // }
     }
   }
   .footer_18_warning {

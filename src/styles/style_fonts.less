@@ -1,0 +1,65 @@
+@import "variables_fonts";
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('@{icomoon-font-path}/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bubble2 {
+  &:before {
+    content: @icon-bubble2;
+  }
+}
+.icon-search {
+  &:before {
+    content: @icon-search;
+  }
+}
+.icon-rocket {
+  &:before {
+    content: @icon-rocket;
+  }
+}
+.icon-google2 {
+  &:before {
+    content: @icon-google2;
+  }
+}
+.icon-facebook2 {
+  &:before {
+    content: @icon-facebook2;
+  }
+}
+.icon-twitter {
+  &:before {
+    content: @icon-twitter;
+  }
+}
+.icon-dribbble {
+  &:before {
+    content: @icon-dribbble;
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: @icon-linkedin;
+  }
+}
+

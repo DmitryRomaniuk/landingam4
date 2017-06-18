@@ -60,5 +60,5 @@ typings/
 .env
 
 # generated css file
-public/css/style.css
+public/css/*.css
 
