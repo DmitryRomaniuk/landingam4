@@ -8,7 +8,7 @@ var file = new staticNode.Server('./public');
 livereload({ start: true });
 
 gulp.task('less', function () {
-    return gulp.src('./src/styles/*.less')
+    return gulp.src('./src/styles/style.less')
         .pipe(less({
             paths: [ path.join(__dirname) ]
         }))
