@@ -11,29 +11,33 @@
 <body>
   <button class="menu"></button>
   <div class="header">
-    <div class="header_logo"></div>
-    <ul class="nav_links">
-      <li class="nav_link">
-        <a href="#">Новости</a>
-      </li>
-      <li class="nav_link">
-        <a href="#">Статьи</a>
-      </li>
-      <li class="nav_link">
-        <a href="#">Видео</a>
-      </li>
-      <li class="nav_link">
-        <a href="#">Игры</a>
-      </li>
-      <li class="nav_link">
-        <a href="#">Еще</a>
-      </li>
-    </ul>
-    <button class="nav_btn search_button">
-      <span class="icon-search">&nbsp;</span>
-    </button>
-    <button class="nav_btn registration">Регистрация</button>
-    <button class="nav_btn login">Вход</button>
+    <div class="flex_wrapper_left">
+      <div class="header_logo"></div>
+      <ul class="nav_links">
+        <li class="nav_link">
+          <a href="#">Новости</a>
+        </li>
+        <li class="nav_link">
+          <a href="#">Статьи</a>
+        </li>
+        <li class="nav_link">
+          <a href="#">Видео</a>
+        </li>
+        <li class="nav_link">
+          <a href="#">Игры</a>
+        </li>
+        <li class="nav_link">
+          <a href="#">Еще</a>
+        </li>
+      </ul>
+      <button class="nav_btn search_button">
+        <span class="icon-search">&nbsp;</span>
+      </button>
+    </div>
+    <div class="flex_wrapper_right">
+      <button class="nav_btn login">Вход</button>
+      <button class="nav_btn registration">Регистрация</button>
+    </div>
   </div>
 
   <div class="slider clearfix">
@@ -82,8 +86,12 @@
       </div>
     </div>
     <div class="news_title">
-      <span class="news_title_name">НОВОСТИ</span>
-      <a class="news_title_all" href="#" alt="all news">Все&nbsp;новости</a>
+      <div class="flex_wrapper_left">
+        <span class="news_title_name">НОВОСТИ</span>
+        <a class="news_title_all" href="#" alt="all news">
+          <span class="news_title_name_span">Все&nbsp;новости</span>
+        </a>
+      </div>
       <select class="news_select_type">
       <option>Все</option>
       <option>Гонки</option>
@@ -93,8 +101,8 @@
       <option>Симуляторы</option>
       <option>Логические</option>
     </select>
-      <hr>
     </div>
+    <hr class="news_title_underline_line">
     <div class="news_slides clearfix">
       <div class="group_blocks_row">
         <div class="news_slides_wrapper_img">
@@ -189,9 +197,8 @@
             </div>
             <div class="news_slides_wrapper_img">
               <img src="img/news/news7.jpg">
-              <div class="news_slides_second_description">Lorem ipsum dolor sit
+              <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
                 <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-                <hr class="decor_line" />
               </div>
               <div class="description-bubble description-bubble-top description-bubble-top-small">
                 <div class="description-bubble-wrapper">
@@ -640,7 +647,7 @@
     <div class="footer_decor">
       <div class="footer_decor_redline">
       </div>
-      <img src="img/footer_decor.png" class="footer_decor_mountans"/>
+      <img src="img/footer_decor.png" class="footer_decor_mountans" />
       <div class="footer_decor_blueline">
       </div>
     </div>
