@@ -40,38 +40,40 @@
     </div>
   </div>
 
-  <div class="slider clearfix">
+  <div class="slider">
     <input type="radio" name="slide_switch" id="id1-img-slider" />
-    <img src="img/slides/slide1.jpg" />
+    <img src="img/slides/slide1.jpg" alt="img" />
     <label for="id1-img-slider">
-    <img src="img/slides/slide1_s.jpg"/>
+    <img src="img/slides/slide1_s.jpg" alt="img"/>
   </label>
     <input type="radio" name="slide_switch" id="id2-img-slider" />
     <label for="id2-img-slider">
-    <img src="img/slides/slide2_s.jpg"/>
+    <img src="img/slides/slide2_s.jpg" alt="img"/>
   </label>
-    <img src="img/slides/slide2.jpg" />
+    <img src="img/slides/slide2.jpg" alt="img" />
     <input type="radio" name="slide_switch" id="id3-img-slider" />
     <label for="id3-img-slider">
-    <img src="img/slides/slide3_s.jpg"/>
+    <img src="img/slides/slide3_s.jpg" alt="img"/>
   </label>
-    <img src="img/slides/slide3.jpg" />
+    <img src="img/slides/slide3.jpg" alt="img" />
     <input type="radio" name="slide_switch" id="id4-img-slider" />
     <label for="id4-img-slider">
-    <img src="img/slides/slide4_s.jpg"/>
+    <img src="img/slides/slide4_s.jpg" alt="img"/>
   </label>
-    <img src="img/slides/slide4.jpg" />
+    <img src="img/slides/slide4.jpg" alt="img" />
     <input type="radio" name="slide_switch" id="id5-img-slider" />
     <label for="id5-img-slider">
-    <img src="img/slides/slide5_s.jpg"/>
+    <img src="img/slides/slide5_s.jpg" alt="img"/>
   </label>
-    <img src="img/slides/slide5.jpg" />
-    <div class="slide_preview_description"><span class="slide_preview_description_title">Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.</span><br/><br/><span>
-        Sed sit amet iaculis lacus. Proin a justo tincidunt dolor feugiat commodo. Donec egestas augue
-        ut risus blandit, non ultricies turpis pretium. Cras ac faucibus purus.<br/>Fusce ut urna tempus odio
-        scelerisque vehicula sed ut ante. Sed pellentesque lobortis blandit. Fusce scelerisque leo non tristique
-        condimentum. Nullam dignissim augue sapien, quis placerat enim scelerisque euismod.</span>
+    <img src="img/slides/slide5.jpg" alt="img" />
+    <div class="slide_preview_description" lang="la">
+      <h3 class="slide_preview_description_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+      <p>
+        Sed sit amet iaculis lacus. Proin a justo tincidunt dolor feugiat commodo. Donec egestas augue ut risus blandit, non ultricies
+        turpis pretium. Cras ac faucibus purus.<br/>Fusce ut urna tempus odio scelerisque vehicula sed ut ante. Sed
+        pellentesque lobortis blandit. Fusce scelerisque leo non tristique condimentum. Nullam dignissim augue sapien, quis
+        placerat enim scelerisque euismod.
+      </p>
     </div>
     <div class="decor_main_slide">
       <img src="img/decor.png" alt="decor main slide">
@@ -79,7 +81,7 @@
   </div>
 
   <div class="container news">
-    <div class="clearfix">
+    <div>
       <div class="sort_news"><span class="sort_news_sort_by">Сортировать:</span>
         <button class="sort_news_btn" data-active="true">Популярные</button>
         <button class="sort_news_btn">Новые</button>
@@ -87,8 +89,8 @@
     </div>
     <div class="news_title">
       <div class="flex_wrapper_left">
-        <span class="news_title_name">НОВОСТИ</span>
-        <a class="news_title_all" href="#" alt="all news">
+        <h2 class="news_title_name">НОВОСТИ</h2>
+        <a class="news_title_all" href="#">
           <span class="news_title_name_span">Все&nbsp;новости</span>
         </a>
       </div>
@@ -103,29 +105,27 @@
     </select>
     </div>
     <hr class="news_title_underline_line">
-    <div class="news_slides clearfix">
+    <div class="news_slides">
       <div class="group_blocks_row">
         <div class="news_slides_wrapper_img">
           <img src="img/news/news1.jpg" alt="fast car">
-          <div class="news_slides_main_description">
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-            <hr class="decor_line" />
+          <div class="news_slides_main_description decor_line_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div class="news_slides_wrapper_img">
-          <img src="img/news/news4.jpg">
-          <div class="news_slides_second_description">Lorem ipsum dolor sit
-            <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-            <hr class="decor_line" />
+          <img src="img/news/news4.jpg" alt="img">
+          <div class="news_slides_second_description decor_line_text">
+            <p>Lorem ipsum dolor sit
+              <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+            </p>
           </div>
           <div class="description-bubble description-bubble-left description-bubble-top-middle">
             <div class="description-bubble-wrapper">
               <p class="description-bubble_text">
-                <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit amet,
-                consectetur adipiscing elit.
-                </span>
+                <span><strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> 
+                ipsum dolor sit amet, consectetur adipiscing elit.</span>
               </p>
-              <hr class="decor_line" />
             </div>
           </div>
         </div>
@@ -133,10 +133,11 @@
       <div class="group_blocks_row">
         <div class="group_blocks group_blocks_2">
           <div class="news_slides_wrapper_img">
-            <img src="img/news/news2.jpg">
-            <div class="news_slides_second_description">Lorem ipsum dolor sit
-              <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-              <hr class="decor_line" />
+            <img src="img/news/news2.jpg" alt="img" />
+            <div class="news_slides_second_description decor_line_text">
+              <p>Lorem ipsum dolor sit
+                <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+              </p>
             </div>
             <div class="description-bubble description-bubble-top description-bubble-top-large">
               <div class="description-bubble-wrapper">
@@ -148,10 +149,9 @@
             </div>
           </div>
           <div class="news_slides_wrapper_img">
-            <img src="img/news/news3.jpg">
-            <div class="news_slides_second_description">Lorem ipsum dolor sit
+            <img src="img/news/news3.jpg" alt="img" />
+            <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
               <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
-              <hr class="decor_line" />
             </div>
             <div class="description-bubble description-bubble-top description-bubble-top-large">
               <div class="description-bubble-wrapper">
@@ -165,26 +165,28 @@
         </div>
         <div class="group_blocks group_blocks_3">
           <div class="news_slides_wrapper_img">
-            <img src="img/news/news5.jpg">
-            <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
-              <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+            <img src="img/news/news5.jpg" alt="img" />
+            <div class="news_slides_second_description decor_line_text">
+              <p>Lorem ipsum dolor sit
+                <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+              </p>
             </div>
             <div class="description-bubble description-bubble-left description-bubble-top-middle">
               <div class="description-bubble-wrapper">
                 <p class="description-bubble_text">
-                  <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit
-                  amet, consectetur adipiscing elit.
-                  </span>
+                  <span><strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> 
+                  ipsum dolor sit amet, consectetur adipiscing elit.</span>
                 </p>
-                <hr class="decor_line" />
               </div>
             </div>
           </div>
           <div class="group_blocks group_blocks_4">
             <div class="news_slides_wrapper_img">
-              <img src="img/news/news6.jpg">
-              <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
-                <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+              <img src="img/news/news6.jpg" alt="img" />
+              <div class="news_slides_second_description decor_line_text">
+                <p>Lorem ipsum dolor sit
+                  <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+                </p>
               </div>
               <div class="description-bubble description-bubble-top description-bubble-top-small">
                 <div class="description-bubble-wrapper">
@@ -196,9 +198,11 @@
               </div>
             </div>
             <div class="news_slides_wrapper_img">
-              <img src="img/news/news7.jpg">
-              <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
-                <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+              <img src="img/news/news7.jpg" alt="img" />
+              <div class="news_slides_second_description decor_line_text">
+                <p>Lorem ipsum dolor sit
+                  <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
+                </p>
               </div>
               <div class="description-bubble description-bubble-top description-bubble-top-small">
                 <div class="description-bubble-wrapper">
@@ -212,7 +216,6 @@
           </div>
         </div>
       </div>
-
     </div>
     <div class="add_more">
       <button class="add_more_button">Подгрузить еще</button>
@@ -225,7 +228,7 @@
         <div class="flex_wrapper_left">
           <div class="games_title">
             <span class="games_title_name">Игры</span>
-            <a class="games_title_all" href="#" alt="all news">Весь&nbsp;каталог</a>
+            <a class="games_title_all" href="#">Весь&nbsp;каталог</a>
           </div>
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0"></li>
@@ -245,72 +248,72 @@
           <div class="game_block_preview">
             <div class="flex_wrapper_left">
               <div class="game_block_preview_img_wrapper">
-                <img src="img/games/game1.jpg">
+                <img src="img/games/game1.jpg" alt="img" />
               </div>
             </div>
             <div class="flex_wrapper_right">
-              <span class="game_block_preview_title">Lorem ipsum</span><br>
-              <span class="game_block_preview_platform">PC,PS4,
-          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
-        </span><br><br>
-              <span class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming
-          tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius
-          efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt ad.
-        </span>
+              <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+              <p class="game_block_preview_platform">PC,PS4,
+                <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+              </p>
+              <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum
+                principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes
+                alienum dissentiunt ad.
+              </p>
               <div class="game_block_preview_rating">8.5</div>
             </div>
           </div>
           <div class="game_block_preview">
             <div class="flex_wrapper_left">
               <div class="game_block_preview_img_wrapper">
-                <img src="img/games/game2.jpg">
+                <img src="img/games/game2.jpg" alt="img" />
               </div>
             </div>
             <div class="flex_wrapper_right">
-              <span class="game_block_preview_title">Lorem ipsum</span><br>
-              <span class="game_block_preview_platform">PC,PS4,
-          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
-        </span><br><br>
-              <span class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming
-          tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius
-          efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt ad.
-        </span>
+              <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+              <p class="game_block_preview_platform">PC,PS4,
+                <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+              </p>
+              <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum
+                principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes
+                alienum dissentiunt ad.
+              </p>
               <div class="game_block_preview_rating">8.5</div>
             </div>
           </div>
           <div class="game_block_preview">
             <div class="flex_wrapper_left">
               <div class="game_block_preview_img_wrapper">
-                <img src="img/games/game3.jpg">
+                <img src="img/games/game3.jpg" alt="img" />
               </div>
             </div>
             <div class="flex_wrapper_right">
-              <span class="game_block_preview_title">Lorem ipsum</span><br>
-              <span class="game_block_preview_platform">PC,PS4,
-          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
-        </span><br><br>
-              <span class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming
-          tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius
-          efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt ad.
-        </span>
+              <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+              <p class="game_block_preview_platform">PC,PS4,
+                <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+              </p>
+              <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum
+                principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes
+                alienum dissentiunt ad.
+              </p>
               <div class="game_block_preview_rating">8.5</div>
             </div>
           </div>
           <div class="game_block_preview">
             <div class="flex_wrapper_left">
               <div class="game_block_preview_img_wrapper">
-                <img src="img/games/game4.jpg">
+                <img src="img/games/game4.jpg" alt="img" />
               </div>
             </div>
             <div class="flex_wrapper_right">
-              <span class="game_block_preview_title">Lorem ipsum</span><br>
-              <span class="game_block_preview_platform">PC,PS4,
-          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
-        </span><br><br>
-              <span class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming
-          tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius
-          efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt ad.
-        </span>
+              <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+              <p class="game_block_preview_platform">PC,PS4,
+                <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+              </p>
+              <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum
+                principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes
+                alienum dissentiunt ad.
+              </p>
               <div class="game_block_preview_rating">8.5</div>
             </div>
           </div>
@@ -326,7 +329,7 @@
         <div class="flex_wrapper_left">
           <div class="trailers_title">
             <span class="trailers_title_name">Трейлеры</span>
-            <a class="trailers_title_all" href="#" alt="all news">Весь&nbsp;каталог</a>
+            <a class="trailers_title_all" href="#">Весь&nbsp;каталог</a>
           </div>
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0"></li>
@@ -350,15 +353,12 @@
                   <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
                   </div>
                   <div class="trailer_block_preview_hover_color"></div>
-                  <div class="trailer_block_preview_squire"></div>
-                  <img src="img/trailers/trailer1.jpg">
+                  <img src="img/trailers/trailer1.jpg" alt="img" />
                 </div>
               </div>
               <div class="flex_wrapper_right">
-                <span>
-              <span class="trailer_block_preview_title">Lorem ipsum</span><br><br>
-                <span class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</span>
-                </span>
+              <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
+              <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
           </div>
@@ -369,15 +369,12 @@
                   <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
                   </div>
                   <div class="trailer_block_preview_hover_color"></div>
-                  <div class="trailer_block_preview_squire"></div>
-                  <img src="img/trailers/trailer2.jpg">
+                  <img src="img/trailers/trailer2.jpg" alt="img" />
                 </div>
               </div>
               <div class="flex_wrapper_right">
-                <span>
-              <span class="trailer_block_preview_title">Lorem ipsum</span><br><br>
-                <span class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</span>
-                </span>
+              <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
+              <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
           </div>
@@ -388,15 +385,12 @@
                   <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
                   </div>
                   <div class="trailer_block_preview_hover_color"></div>
-                  <div class="trailer_block_preview_squire"></div>
-                  <img src="img/trailers/trailer3.jpg">
+                  <img src="img/trailers/trailer3.jpg" alt="img" />
                 </div>
               </div>
               <div class="flex_wrapper_right">
-                <span>
-              <span class="trailer_block_preview_title">Lorem ipsum</span><br><br>
-                <span class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</span>
-                </span>
+              <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
+              <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
           </div>
@@ -407,15 +401,12 @@
                   <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
                   </div>
                   <div class="trailer_block_preview_hover_color"></div>
-                  <div class="trailer_block_preview_squire"></div>
-                  <img src="img/trailers/trailer4.jpg">
+                  <img src="img/trailers/trailer4.jpg" alt="img" />
                 </div>
               </div>
               <div class="flex_wrapper_right">
-                <span>
-              <span class="trailer_block_preview_title">Lorem ipsum</span><br><br>
-                <span class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</span>
-                </span>
+              <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
+              <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
           </div>
@@ -426,15 +417,12 @@
                   <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
                   </div>
                   <div class="trailer_block_preview_hover_color"></div>
-                  <div class="trailer_block_preview_squire"></div>
-                  <img src="img/trailers/trailer5.jpg">
+                  <img src="img/trailers/trailer5.jpg" alt="img" />
                 </div>
               </div>
               <div class="flex_wrapper_right">
-                <span>
-              <span class="trailer_block_preview_title">Lorem ipsum</span><br><br>
-                <span class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</span>
-                </span>
+              <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
+              <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
           </div>
@@ -445,15 +433,12 @@
                   <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
                   </div>
                   <div class="trailer_block_preview_hover_color"></div>
-                  <div class="trailer_block_preview_squire"></div>
-                  <img src="img/trailers/trailer6.jpg">
+                  <img src="img/trailers/trailer6.jpg" alt="img" />
                 </div>
               </div>
               <div class="flex_wrapper_right">
-                <span>
-              <span class="trailer_block_preview_title">Lorem ipsum</span><br><br>
-                <span class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</span>
-                </span>
+              <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
+              <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
           </div>
@@ -462,18 +447,18 @@
     </div>
   </div>
 
-  <div class="articles clearfix">
+  <div class="articles">
     <div class="container">
       <div class="articles_head">
         <div class="articles_title">
           <span class="articles_title_name">Статьи</span>
-          <a class="articles_title_all" href="#" alt="all articles">
+          <a class="articles_title_all" href="#">
             <span class="articles_title_name_span">Все&nbsp;статьи</span>
           </a>
         </div>
         <button class="add_more_button add_article">Добавить статью&nbsp;<strong>+</strong></button>
       </div>
-      <div class="articles_main clearfix">
+      <div class="articles_main">
         <div class="article_block_preview_wrapper">
           <div class="article_block_preview">
             <div class="article_block_preview_header">
@@ -484,26 +469,24 @@
                   </span>
                 </div>
                 <div class="article_block_preview_img">
-                  <img src="img/authors/author1.jpg" width="70" height="70">
+                  <img src="img/authors/author1.jpg" alt="img" />
                 </div>
               </div>
-              <div class="article_block_preview_name">Lorem ipsum
+              <div class="article_block_preview_name"><h2>Lorem ipsum</h2>
                 <div class="article_block_preview_count_open"><i class="icon-rocket"></i>24</div>
                 <div class="article_block_preview_count_comment"><i class="icon-bubble2"></i>32</div>
               </div>
             </div>
-            <div class="article_block_preview_description_wrapper">
-              <div class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</div>
-              <br>
-              <div class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
+            <article class="article_block_preview_description_wrapper">
+              <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
                 ut his.
-              </div>
-              <br>
-              <div class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
+              </p>
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
                 eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
                 id, ne quo aliquam officiis assueverit.
-              </div>
-            </div>
+              </p>
+            </article>
           </div>
         </div>
         <div class="article_block_preview_wrapper">
@@ -516,26 +499,24 @@
                   </span>
                 </div>
                 <div class="article_block_preview_img">
-                  <img src="img/authors/author2.jpg" width="70" height="70">
+                  <img src="img/authors/author2.jpg" alt="img" />
                 </div>
               </div>
-              <div class="article_block_preview_name">Lorem ipsum
+              <div class="article_block_preview_name"><h2>Lorem ipsum</h2>
                 <div class="article_block_preview_count_open"><i class="icon-rocket"></i>24</div>
                 <div class="article_block_preview_count_comment"><i class="icon-bubble2"></i>32</div>
               </div>
             </div>
-            <div class="article_block_preview_description_wrapper">
-              <div class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</div>
-              <br>
-              <div class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
+            <article class="article_block_preview_description_wrapper">
+              <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
                 ut his.
-              </div>
-              <br>
-              <div class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
+              </p>
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
                 eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
                 id, ne quo aliquam officiis assueverit.
-              </div>
-            </div>
+              </p>
+            </article>
           </div>
         </div>
         <div class="article_block_preview_wrapper">
@@ -548,29 +529,26 @@
                   </span>
                 </div>
                 <div class="article_block_preview_img">
-                  <img src="img/authors/author3.jpg" width="70" height="70">
+                  <img src="img/authors/author3.jpg" alt="img" />
                 </div>
               </div>
-              <div class="article_block_preview_name">Lorem ipsum
+              <div class="article_block_preview_name"><h2>Lorem ipsum</h2>
                 <div class="article_block_preview_count_open"><i class="icon-rocket"></i>24</div>
                 <div class="article_block_preview_count_comment"><i class="icon-bubble2"></i>32</div>
               </div>
             </div>
-            <div class="article_block_preview_description_wrapper">
-              <div class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</div>
-              <br>
-              <div class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
+            <article class="article_block_preview_description_wrapper">
+              <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
                 ut his.
-              </div>
-              <br>
-              <div class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
+              </p>
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
                 eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
                 id, ne quo aliquam officiis assueverit.
-              </div>
-            </div>
+              </p>
+            </article>
           </div>
         </div>
-
         <div class="article_block_preview_wrapper">
           <div class="article_block_preview">
             <div class="article_block_preview_header">
@@ -581,29 +559,26 @@
                   </span>
                 </div>
                 <div class="article_block_preview_img">
-                  <img src="img/authors/author3.jpg" width="70" height="70">
+                  <img src="img/authors/author3.jpg" alt="img" />
                 </div>
               </div>
-              <div class="article_block_preview_name">Lorem ipsum
+              <div class="article_block_preview_name"><h2>Lorem ipsum</h2>
                 <div class="article_block_preview_count_open"><i class="icon-rocket"></i>24</div>
                 <div class="article_block_preview_count_comment"><i class="icon-bubble2"></i>32</div>
               </div>
             </div>
-            <div class="article_block_preview_description_wrapper">
-              <div class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</div>
-              <br>
-              <div class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
+            <article class="article_block_preview_description_wrapper">
+              <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
                 ut his.
-              </div>
-              <br>
-              <div class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
+              </p>
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
                 eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
                 id, ne quo aliquam officiis assueverit.
-              </div>
-            </div>
+              </p>
+            </article>
           </div>
         </div>
-
         <div class="article_block_preview_wrapper">
           <div class="article_block_preview">
             <div class="article_block_preview_header">
@@ -614,29 +589,26 @@
                   </span>
                 </div>
                 <div class="article_block_preview_img">
-                  <img src="img/authors/author5.jpg" width="70" height="70">
+                  <img src="img/authors/author5.jpg" alt="img" />
                 </div>
               </div>
-              <div class="article_block_preview_name">Lorem ipsum
+              <div class="article_block_preview_name"><h2>Lorem ipsum</h2>
                 <div class="article_block_preview_count_open"><i class="icon-rocket"></i>24</div>
                 <div class="article_block_preview_count_comment"><i class="icon-bubble2"></i>32</div>
               </div>
             </div>
-            <div class="article_block_preview_description_wrapper">
-              <div class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</div>
-              <br>
-              <div class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
+            <article class="article_block_preview_description_wrapper">
+              <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
                 ut his.
-              </div>
-              <br>
-              <div class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
+              </p>
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
                 eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
                 id, ne quo aliquam officiis assueverit.
-              </div>
-            </div>
+              </p>
+            </article>
           </div>
         </div>
-
         <div class="article_block_preview_wrapper">
           <div class="article_block_preview">
             <div class="article_block_preview_header">
@@ -647,27 +619,26 @@
                   </span>
                 </div>
                 <div class="article_block_preview_img">
-                  <img src="img/authors/author6.jpg" width="70" height="70">
+                  <img src="img/authors/author6.jpg" alt="img" />
                 </div>
               </div>
-              <div class="article_block_preview_name">Lorem ipsum
+              <div class="article_block_preview_name"><h2>Lorem ipsum</h2>
                 <div class="article_block_preview_count_open"><i class="icon-rocket"></i>24</div>
                 <div class="article_block_preview_count_comment"><i class="icon-bubble2"></i>32</div>
               </div>
             </div>
-            <div class="article_block_preview_description_wrapper">
-              <div class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</div>
-              <br>
-              <div class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
+            <article class="article_block_preview_description_wrapper">
+              <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
                 ut his.
-              </div>
-              <br>
-              <div class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
+              </p>
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
                 eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
                 id, ne quo aliquam officiis assueverit.
-              </div>
-            </div>
+              </p>
+            </article>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -678,7 +649,6 @@
   </div>
 
   <footer>
-    <div class="clearfix">
       <div class="footer_description">
         <div class="running_icon"></div>
         <a class="twitter_icon" href="#"><i class="icon-twitter"></i></a>
@@ -687,27 +657,25 @@
         <a class="google_icon" href="#"><i class="icon-google2"></i></a>
         <a class="linkedin_icon" href="#"><i class="icon-linkedin"></i></a>
         <br><br>
-        <div class="footer_description_text_wrapper clearfix">
-          <span class="footer_description_header">Lorem ipsum.</span>
-          <br><br>
-          <span class="footer_description_text">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut
+        <div class="footer_description_text_wrapper">
+          <h2 class="footer_description_header">Lorem ipsum.</h2>
+          <p class="footer_description_text">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut
       eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est
       populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis assueverit.
-    </span>
+    </p>
         </div>
-        <button class="footer_write_to_us_button clearfix">Написать нам</button>
+        <button class="footer_write_to_us_button">Написать нам</button>
+      <img src="img/man.png" class="footer_img_man" alt="img" />
       </div>
-      <img src="img/man.png" class="clearfix footer_img_man" style="overflow: hidden" />
       <div class="footer_18_warning">18+</div>
-      <div class="footer_copyright clearfix">
+      <div class="footer_copyright">
         <span>Copyright &copy; 2001-2014<br>Все права защищены законодательством РФ. Использование материалов
     возможно только с прямой ссылкой на источник</span>
       </div>
-    </div>
     <div class="footer_decor">
       <div class="footer_decor_redline">
       </div>
-      <img src="img/footer_decor.png" class="footer_decor_mountans" />
+      <img src="img/footer_decor.png" class="footer_decor_mountans" alt="img" />
       <div class="footer_decor_blueline">
       </div>
     </div>
