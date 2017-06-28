@@ -5,26 +5,21 @@
   <meta charset="UTF-8">
   <title>AM4</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-    crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <link href="css/style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-  <nav class="navbar navbar-toggleable-md navbar-light">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">
-    <img src="../img/logo.png" alt="">
-  </a>
+  <nav class="navbar navbar-toggleable-md navbar-light header">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <img src="../img/logo.png" alt="">
+    </a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -44,62 +39,52 @@
           <a class="nav-link" href="#">Еще</a>
         </li>
       </ul>
-      <ul class="navbar-nav my-2 my-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Вход</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Регистрация</a>
-        </li>
-      </ul>
+      <button type="button" class="btn btn-secondary nav_btn login">Вход</button>
+      <button type="button" class="btn btn-info nav_btn registration">Регистрация</button>
     </div>
   </nav>
-
   <div class="slider">
     <input type="radio" name="slide_switch" id="id1-img-slider" />
     <img src="img/slides/slide1.jpg" alt="img" />
     <label for="id1-img-slider">
-    <img src="img/slides/slide1_s.jpg" alt="img"/>
-  </label>
+            <img src="img/slides/slide1_s.jpg" alt="img"/>
+        </label>
     <input type="radio" name="slide_switch" id="id2-img-slider" />
     <label for="id2-img-slider">
-    <img src="img/slides/slide2_s.jpg" alt="img"/>
-  </label>
+            <img src="img/slides/slide2_s.jpg" alt="img"/>
+        </label>
     <img src="img/slides/slide2.jpg" alt="img" />
     <input type="radio" name="slide_switch" id="id3-img-slider" />
     <label for="id3-img-slider">
-    <img src="img/slides/slide3_s.jpg" alt="img"/>
-  </label>
+            <img src="img/slides/slide3_s.jpg" alt="img"/>
+        </label>
     <img src="img/slides/slide3.jpg" alt="img" />
     <input type="radio" name="slide_switch" id="id4-img-slider" />
     <label for="id4-img-slider">
-    <img src="img/slides/slide4_s.jpg" alt="img"/>
-  </label>
+            <img src="img/slides/slide4_s.jpg" alt="img"/>
+        </label>
     <img src="img/slides/slide4.jpg" alt="img" />
     <input type="radio" name="slide_switch" id="id5-img-slider" />
     <label for="id5-img-slider">
-    <img src="img/slides/slide5_s.jpg" alt="img"/>
-  </label>
+            <img src="img/slides/slide5_s.jpg" alt="img"/>
+        </label>
     <img src="img/slides/slide5.jpg" alt="img" />
     <div class="slide_preview_description" lang="la">
       <h3 class="slide_preview_description_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
       <p>
-        Sed sit amet iaculis lacus. Proin a justo tincidunt dolor feugiat commodo. Donec egestas augue ut risus blandit, non ultricies
-        turpis pretium. Cras ac faucibus purus.<br/>Fusce ut urna tempus odio scelerisque vehicula sed ut ante. Sed
-        pellentesque lobortis blandit. Fusce scelerisque leo non tristique condimentum. Nullam dignissim augue sapien, quis
-        placerat enim scelerisque euismod.
+        Sed sit amet iaculis lacus. Proin a justo tincidunt dolor feugiat commodo. Donec egestas augue ut risus blandit, non ultricies turpis pretium. Cras ac faucibus purus.<br/>Fusce ut urna tempus odio scelerisque vehicula sed ut ante. Sed pellentesque
+        lobortis blandit. Fusce scelerisque leo non tristique condimentum.
       </p>
     </div>
     <div class="decor_main_slide">
       <img src="img/decor.png" alt="decor main slide">
     </div>
   </div>
-
   <div class="container news">
     <div>
       <div class="sort_news"><span class="sort_news_sort_by">Сортировать:</span>
-        <button class="sort_news_btn" data-active="true">Популярные</button>
-        <button class="sort_news_btn">Новые</button>
+        <button type="button" class="btn btn-warning sort_news_btn" data-active="true">Популярные</button>
+        <button type="button" class="btn btn-secondary sort_news_btn">Новые</button>
       </div>
     </div>
     <div class="news_title">
@@ -109,15 +94,16 @@
           <span class="news_title_name_span">Все&nbsp;новости</span>
         </a>
       </div>
-      <select class="news_select_type">
-      <option>Все</option>
-      <option>Гонки</option>
-      <option>Квесты</option>
-      <option>Стратегии</option>
-      <option>Шутеры</option>
-      <option>Симуляторы</option>
-      <option>Логические</option>
-    </select>
+      <label class="mr-sm-2" for="inlineFormCustomSelect"></label>
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0 news_select_type" id="inlineFormCustomSelect">
+            <option selected>Все</option>
+            <option value="1">Гонки</option>
+            <option value="2">Квесты</option>
+            <option value="3">Стратегии</option>
+            <option value="4">Шутеры</option>
+            <option value="5">Симуляторы</option>
+            <option value="6">Логические</option>
+        </select>
     </div>
     <hr class="news_title_underline_line">
     <div class="news_slides">
@@ -157,8 +143,7 @@
             <div class="description-bubble description-bubble-top description-bubble-top-large">
               <div class="description-bubble-wrapper">
                 <p class="description-bubble_text">
-                  <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit
-                  amet, consectetur adipiscing elit.
+                  <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
             </div>
@@ -171,8 +156,7 @@
             <div class="description-bubble description-bubble-top description-bubble-top-large">
               <div class="description-bubble-wrapper">
                 <p class="description-bubble_text">
-                  <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit
-                  amet, consectetur adipiscing elit.
+                  <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
             </div>
@@ -206,8 +190,7 @@
               <div class="description-bubble description-bubble-top description-bubble-top-small">
                 <div class="description-bubble-wrapper">
                   <p class="description-bubble_text">
-                    <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit
-                    amet, consectetur adipiscing elit.
+                    <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
               </div>
@@ -222,8 +205,7 @@
               <div class="description-bubble description-bubble-top description-bubble-top-small">
                 <div class="description-bubble-wrapper">
                   <p class="description-bubble_text">
-                    <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit
-                    amet, consectetur adipiscing elit.
+                    <strong class="news_slides_second_description-font-bold decor_line_text">Lorem</strong> ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
               </div>
@@ -233,110 +215,193 @@
       </div>
     </div>
     <div class="add_more">
-      <button class="add_more_button">Подгрузить еще</button>
+      <button type="button" class="btn btn-secondary add_more_button">Подгрузить еще</button>
     </div>
   </div>
   <div class="games">
     <div class="games_left_decor"></div>
     <div class="container">
-      <div class="games_head">
-        <div class="flex_wrapper_left">
-          <div class="games_title">
-            <span class="games_title_name">Игры</span>
-            <a class="games_title_all" href="#">Весь&nbsp;каталог</a>
-          </div>
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-          </ol>
-        </div>
-        <div class="scroll-turn-preview">
-          <div class="scroll-turn-preview-left"></div>
-          <div class="scroll-turn-preview-right"></div>
-        </div>
-      </div>
       <div class="game_main">
+        <div class="games_head">
+          <div class="flex_wrapper_left">
+            <div class="games_title">
+              <span class="games_title_name">Игры</span>
+              <a class="games_title_all" href="#">Весь&nbsp;каталог</a>
+            </div>
+          </div>
+          <div class="scroll-turn-preview">
+            <a class="scroll-turn-preview-left" href="#carouselExampleIndicators" role="button" data-slide="prev"></a>
+            <a class="scroll-turn-preview-right" href="#carouselExampleIndicators" role="button" data-slide="next"></a>
+          </div>
+        </div>
         <div class="game_block_preview_wrapper">
-          <div class="game_block_preview">
-            <div class="flex_wrapper_left">
-              <div class="game_block_preview_img_wrapper">
-                <img src="img/games/game1.jpg" alt="img" />
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="container">
+                  <div class="row">
+                    <div class="game_block_preview">
+                      <div class="flex_wrapper_left">
+                        <div class="game_block_preview_img_wrapper">
+                          <img src="img/games/game1.jpg" alt="img" />
+                        </div>
+                      </div>
+                      <div class="flex_wrapper_right">
+                        <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+                        <p class="game_block_preview_platform">PC,PS4,
+                          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+                        </p>
+                        <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
+                          ad.
+                        </p>
+                        <div class="game_block_preview_rating">8.5</div>
+                      </div>
+                    </div>
+                    <div class="game_block_preview">
+                      <div class="flex_wrapper_left">
+                        <div class="game_block_preview_img_wrapper">
+                          <img src="img/games/game2.jpg" alt="img" />
+                        </div>
+                      </div>
+                      <div class="flex_wrapper_right">
+                        <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+                        <p class="game_block_preview_platform">PC,PS4,
+                          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+                        </p>
+                        <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
+                          ad.
+                        </p>
+                        <div class="game_block_preview_rating">8.5</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="game_block_preview">
+                      <div class="flex_wrapper_left">
+                        <div class="game_block_preview_img_wrapper">
+                          <img src="img/games/game3.jpg" alt="img" />
+                        </div>
+                      </div>
+                      <div class="flex_wrapper_right">
+                        <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+                        <p class="game_block_preview_platform">PC,PS4,
+                          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+                        </p>
+                        <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
+                          ad.
+                        </p>
+                        <div class="game_block_preview_rating">8.5</div>
+                      </div>
+                    </div>
+                    <div class="game_block_preview">
+                      <div class="flex_wrapper_left">
+                        <div class="game_block_preview_img_wrapper">
+                          <img src="img/games/game4.jpg" alt="img" />
+                        </div>
+                      </div>
+                      <div class="flex_wrapper_right">
+                        <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+                        <p class="game_block_preview_platform">PC,PS4,
+                          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+                        </p>
+                        <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
+                          ad.
+                        </p>
+                        <div class="game_block_preview_rating">8.5</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="flex_wrapper_right">
-              <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
-              <p class="game_block_preview_platform">PC,PS4,
-                <a class="game_block_preview_platform_link" href="#">Xbox One</a>
-              </p>
-              <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum
-                principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes
-                alienum dissentiunt ad.
-              </p>
-              <div class="game_block_preview_rating">8.5</div>
-            </div>
-          </div>
-          <div class="game_block_preview">
-            <div class="flex_wrapper_left">
-              <div class="game_block_preview_img_wrapper">
-                <img src="img/games/game2.jpg" alt="img" />
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row">
+                    <div class="game_block_preview">
+                      <div class="flex_wrapper_left">
+                        <div class="game_block_preview_img_wrapper">
+                          <img src="img/games/game1.jpg" alt="img" />
+                        </div>
+                      </div>
+                      <div class="flex_wrapper_right">
+                        <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+                        <p class="game_block_preview_platform">PC,PS4,
+                          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+                        </p>
+                        <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
+                          ad.
+                        </p>
+                        <div class="game_block_preview_rating">8.5</div>
+                      </div>
+                    </div>
+                    <div class="game_block_preview">
+                      <div class="flex_wrapper_left">
+                        <div class="game_block_preview_img_wrapper">
+                          <img src="img/games/game2.jpg" alt="img" />
+                        </div>
+                      </div>
+                      <div class="flex_wrapper_right">
+                        <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+                        <p class="game_block_preview_platform">PC,PS4,
+                          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+                        </p>
+                        <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
+                          ad.
+                        </p>
+                        <div class="game_block_preview_rating">8.5</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="game_block_preview">
+                      <div class="flex_wrapper_left">
+                        <div class="game_block_preview_img_wrapper">
+                          <img src="img/games/game3.jpg" alt="img" />
+                        </div>
+                      </div>
+                      <div class="flex_wrapper_right">
+                        <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+                        <p class="game_block_preview_platform">PC,PS4,
+                          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+                        </p>
+                        <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
+                          ad.
+                        </p>
+                        <div class="game_block_preview_rating">8.5</div>
+                      </div>
+                    </div>
+                    <div class="game_block_preview">
+                      <div class="flex_wrapper_left">
+                        <div class="game_block_preview_img_wrapper">
+                          <img src="img/games/game4.jpg" alt="img" />
+                        </div>
+                      </div>
+                      <div class="flex_wrapper_right">
+                        <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
+                        <p class="game_block_preview_platform">PC,PS4,
+                          <a class="game_block_preview_platform_link" href="#">Xbox One</a>
+                        </p>
+                        <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
+                          ad.
+                        </p>
+                        <div class="game_block_preview_rating">8.5</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="flex_wrapper_right">
-              <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
-              <p class="game_block_preview_platform">PC,PS4,
-                <a class="game_block_preview_platform_link" href="#">Xbox One</a>
-              </p>
-              <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum
-                principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes
-                alienum dissentiunt ad.
-              </p>
-              <div class="game_block_preview_rating">8.5</div>
-            </div>
-          </div>
-          <div class="game_block_preview">
-            <div class="flex_wrapper_left">
-              <div class="game_block_preview_img_wrapper">
-                <img src="img/games/game3.jpg" alt="img" />
-              </div>
-            </div>
-            <div class="flex_wrapper_right">
-              <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
-              <p class="game_block_preview_platform">PC,PS4,
-                <a class="game_block_preview_platform_link" href="#">Xbox One</a>
-              </p>
-              <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum
-                principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes
-                alienum dissentiunt ad.
-              </p>
-              <div class="game_block_preview_rating">8.5</div>
-            </div>
-          </div>
-          <div class="game_block_preview">
-            <div class="flex_wrapper_left">
-              <div class="game_block_preview_img_wrapper">
-                <img src="img/games/game4.jpg" alt="img" />
-              </div>
-            </div>
-            <div class="flex_wrapper_right">
-              <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
-              <p class="game_block_preview_platform">PC,PS4,
-                <a class="game_block_preview_platform_link" href="#">Xbox One</a>
-              </p>
-              <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum
-                principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes
-                alienum dissentiunt ad.
-              </p>
-              <div class="game_block_preview_rating">8.5</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <div class="trailers">
     <div class="trailers_left_decor"></div>
     <div class="container">
@@ -461,7 +526,6 @@
       </div>
     </div>
   </div>
-
   <div class="articles">
     <div class="container">
       <div class="articles_head">
@@ -495,12 +559,10 @@
             </div>
             <article class="article_block_preview_description_wrapper">
               <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
-              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
-                ut his.
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
               </p>
-              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
-                eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
-                id, ne quo aliquam officiis assueverit.
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
+                assueverit.
               </p>
             </article>
           </div>
@@ -526,12 +588,10 @@
             </div>
             <article class="article_block_preview_description_wrapper">
               <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
-              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
-                ut his.
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
               </p>
-              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
-                eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
-                id, ne quo aliquam officiis assueverit.
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
+                assueverit.
               </p>
             </article>
           </div>
@@ -557,12 +617,10 @@
             </div>
             <article class="article_block_preview_description_wrapper">
               <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
-              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
-                ut his.
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
               </p>
-              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
-                eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
-                id, ne quo aliquam officiis assueverit.
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
+                assueverit.
               </p>
             </article>
           </div>
@@ -588,12 +646,10 @@
             </div>
             <article class="article_block_preview_description_wrapper">
               <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
-              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
-                ut his.
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
               </p>
-              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
-                eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
-                id, ne quo aliquam officiis assueverit.
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
+                assueverit.
               </p>
             </article>
           </div>
@@ -619,12 +675,10 @@
             </div>
             <article class="article_block_preview_description_wrapper">
               <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
-              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
-                ut his.
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
               </p>
-              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
-                eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
-                id, ne quo aliquam officiis assueverit.
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
+                assueverit.
               </p>
             </article>
           </div>
@@ -650,12 +704,10 @@
             </div>
             <article class="article_block_preview_description_wrapper">
               <h3 class="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam assueverit</h3>
-              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula
-                ut his.
+              <p class="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
               </p>
-              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos,
-                eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has
-                id, ne quo aliquam officiis assueverit.
+              <p class="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
+                assueverit.
               </p>
             </article>
           </div>
@@ -663,12 +715,9 @@
       </div>
     </div>
   </div>
-  </div>
-
   <div class="add_more">
     <button class="add_more_button">Подгрузить еще</button>
   </div>
-
   <footer>
     <div class="footer_description">
       <div class="running_icon"></div>
@@ -680,9 +729,8 @@
       <br><br>
       <div class="footer_description_text_wrapper">
         <h2 class="footer_description_header">Lorem ipsum.</h2>
-        <p class="footer_description_text">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri
-          habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam
-          officiis assueverit.
+        <p class="footer_description_text">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
+          assueverit.
         </p>
       </div>
       <button class="footer_write_to_us_button">Написать нам</button>
