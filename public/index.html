@@ -10,7 +10,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <link href="css/style.css" type="text/css" rel="stylesheet" />
-  <!--col-12 col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-4-->
 </head>
 
 <body>
@@ -82,18 +81,18 @@
     </div>
   </div>
   <div class="news container">
-    <div class="sort_news"><span class="sort_news_sort_by">Сортировать:</span>
+    <div class="sort_news row justify-content-end"><span class="sort_news_sort_by">Сортировать:</span>
       <button type="button" class="btn btn-warning sort_news_btn" data-active="true">Популярные</button>
       <button type="button" class="btn btn-secondary sort_news_btn">Новые</button>
     </div>
-    <div class="news_title">
-      <div class="flex_wrapper_left">
-        <h2 class="news_title_name">НОВОСТИ</h2>
-        <a class="news_title_all" href="#">
-          <span class="news_title_name_span">Все&nbsp;новости</span>
+    <div class="chapter_header news_title row align-items-center">
+      <div class="chapter_title col-12 col-lg-7">
+        <h2 class="chapter_title_name news_title_name">НОВОСТИ</h2>
+        <a class="chapter_title_all news_title_all" href="#">
+          <span class="chapter_title_all_span news_title_name_span">Все&nbsp;новости</span>
         </a>
       </div>
-      <select class="custom-select mb-2 mr-sm-2 mb-sm-0 news_select_type" id="inlineFormCustomSelect">
+      <select class="custom-select news_select_type col-12 col-lg-5" id="inlineFormCustomSelect">
             <option selected>Все</option>
             <option value="1">Гонки</option>
             <option value="2">Квесты</option>
@@ -105,14 +104,14 @@
     </div>
     <hr class="news_title_underline_line">
     <div class="news_slides">
-      <div class="group_blocks_row">
-        <div class="news_slides_wrapper_img">
+      <div class="row">
+        <div class="news_slides_wrapper_img col-12 col-md-7">
           <img src="img/news/news1.jpg" alt="fast car">
           <div class="news_slides_main_description decor_line_text">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
-        <div class="news_slides_wrapper_img">
+        <div class="news_slides_wrapper_img col-12 col-md-5">
           <img src="img/news/news4.jpg" alt="img">
           <div class="news_slides_second_description decor_line_text">
             <p>Lorem ipsum dolor sit
@@ -129,9 +128,9 @@
           </div>
         </div>
       </div>
-      <div class="group_blocks_row">
-        <div class="group_blocks group_blocks_2">
-          <div class="news_slides_wrapper_img">
+      <div class="row">
+        <div class="container col-12 col-md-7">
+          <div class="news_slides_wrapper_img col-6">
             <img src="img/news/news2.jpg" alt="img" />
             <div class="news_slides_second_description decor_line_text">
               <p>Lorem ipsum dolor sit
@@ -146,7 +145,7 @@
               </div>
             </div>
           </div>
-          <div class="news_slides_wrapper_img">
+          <div class="news_slides_wrapper_img col-6">
             <img src="img/news/news3.jpg" alt="img" />
             <div class="news_slides_second_description decor_line_text">Lorem ipsum dolor sit
               <strong class="news_slides_second_description-font-bold">amet</strong>, consectetur adipiscing elit.
@@ -160,8 +159,8 @@
             </div>
           </div>
         </div>
-        <div class="group_blocks group_blocks_3">
-          <div class="news_slides_wrapper_img">
+        <div class="col-12 col-md-5">
+          <div class="news_slides_wrapper_img row">
             <img src="img/news/news5.jpg" alt="img" />
             <div class="news_slides_second_description decor_line_text">
               <p>Lorem ipsum dolor sit
@@ -177,8 +176,8 @@
               </div>
             </div>
           </div>
-          <div class="group_blocks group_blocks_4">
-            <div class="news_slides_wrapper_img">
+          <div class="row">
+            <div class="news_slides_wrapper_img col-6">
               <img src="img/news/news6.jpg" alt="img" />
               <div class="news_slides_second_description decor_line_text">
                 <p>Lorem ipsum dolor sit
@@ -193,7 +192,7 @@
                 </div>
               </div>
             </div>
-            <div class="news_slides_wrapper_img">
+            <div class="news_slides_wrapper_img col-6">
               <img src="img/news/news7.jpg" alt="img" />
               <div class="news_slides_second_description decor_line_text">
                 <p>Lorem ipsum dolor sit
@@ -220,12 +219,10 @@
     <div class="games_left_decor"></div>
     <div class="container">
       <div class="game_main">
-        <div class="games_head">
-          <div class="flex_wrapper_left">
-            <div class="games_title">
-              <span class="games_title_name">Игры</span>
-              <a class="games_title_all" href="#">Весь&nbsp;каталог</a>
-            </div>
+        <div class="chapter_header games_head">
+          <div class="chapter_title games_title">
+            <h2 class="chapter_title_name games_title_name">Игры</h2>
+            <a class="chapter_title_all games_title_all" href="#">Весь&nbsp;каталог</a>
           </div>
           <div class="scroll-turn-preview">
             <a class="scroll-turn-preview-left" href="#carouselGamesIndicators" role="button" data-slide="prev"></a>
@@ -245,13 +242,13 @@
               <div class="carousel-item active">
                 <div class="container">
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game1.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -259,16 +256,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game2.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -276,18 +273,18 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game3.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -295,16 +292,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game4.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -312,8 +309,8 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                 </div>
@@ -321,13 +318,13 @@
               <div class="carousel-item">
                 <div class="container">
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game1.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -335,16 +332,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game2.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -352,18 +349,18 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game3.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -371,16 +368,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game4.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -388,8 +385,8 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                 </div>
@@ -397,13 +394,13 @@
               <div class="carousel-item">
                 <div class="container">
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game1.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -411,16 +408,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game2.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -428,18 +425,18 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game3.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -447,16 +444,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game4.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -464,8 +461,8 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                 </div>
@@ -473,13 +470,13 @@
               <div class="carousel-item">
                 <div class="container">
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game1.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -487,16 +484,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game2.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -504,18 +501,18 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game3.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -523,16 +520,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game4.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -540,8 +537,8 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                 </div>
@@ -549,13 +546,13 @@
               <div class="carousel-item">
                 <div class="container">
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game1.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -563,16 +560,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game2.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -580,18 +577,18 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game3.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -599,16 +596,16 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
-                    <div class="game_block_preview">
-                      <div class="flex_wrapper_left">
+                    <div class="game_block_preview row col-12 col-lg-6 ">
+                      <div class="col-12 col-sm">
                         <div class="game_block_preview_img_wrapper">
                           <img src="img/games/game4.jpg" alt="img" />
                         </div>
                       </div>
-                      <div class="flex_wrapper_right">
+                      <div class="col-12 col-sm">
                         <h2 class="game_block_preview_title">Lorem ipsum</h2><br>
                         <p class="game_block_preview_platform">PC,PS4,
                           <a class="game_block_preview_platform_link" href="#">Xbox One</a>
@@ -616,8 +613,8 @@
                         <p class="game_block_preview_description">Lorem ipsum dolor sit amet, est ad lorem constituto. Ea eum doming tacimates tractatos, pri lobortis indoctum principes in, has quas meliore ullamcorper ei. Et lucilius efficiendi usu. Id quas omittam eum, sea omnes alienum dissentiunt
                           ad.
                         </p>
-                        <div class="game_block_preview_rating">8.5</div>
                       </div>
+                      <div class="game_block_preview_rating">8.5</div>
                     </div>
                   </div>
                 </div>
@@ -628,17 +625,14 @@
       </div>
     </div>
   </div>
-
   <div class="trailers">
     <div class="trailers_left_decor"></div>
     <div class="container">
       <div class="trailer_main">
-        <div class="trailers_head">
-          <div class="flex_wrapper_left">
-            <div class="trailers_title">
-              <span class="trailers_title_name">Трейлеры</span>
-              <a class="trailers_title_all" href="#">Весь&nbsp;каталог</a>
-            </div>
+        <div class="chapter_header trailers_head">
+          <div class="chapter_title trailers_title">
+            <span class="chapter_title_name trailers_title_name">Трейлеры</span>
+            <a class="chapter_title_all trailers_title_all" href="#">Весь&nbsp;каталог</a>
           </div>
           <div class="scroll-turn-preview">
             <a class="scroll-turn-preview-left" href="#carouselTrailerIndicators" role="button" data-slide="prev"></a>
@@ -657,8 +651,8 @@
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                 <div class="container">
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
+                  <div class="row justify-content-center">
+                    <div class="trailer_block_preview_wrapper row col-12 col-md-6 justify-content-center">
                       <div class="trailer_block_preview">
                         <div class="flex_wrapper_left">
                           <div class="trailer_block_preview_img_wrapper">
@@ -674,7 +668,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="trailer_block_preview_wrapper">
+                    <div class="trailer_block_preview_wrapper col-12 col-md-6 justify-content-center">
                       <div class="trailer_block_preview">
                         <div class="flex_wrapper_left">
                           <div class="trailer_block_preview_img_wrapper">
@@ -692,7 +686,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="trailer_block_preview_wrapper">
+                    <div class="trailer_block_preview_wrapper col-12 col-md-6 justify-content-center">
                       <div class="trailer_block_preview">
                         <div class="flex_wrapper_left">
                           <div class="trailer_block_preview_img_wrapper">
@@ -708,7 +702,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="trailer_block_preview_wrapper">
+                    <div class="trailer_block_preview_wrapper col-12 col-md-6 justify-content-center">
                       <div class="trailer_block_preview">
                         <div class="flex_wrapper_left">
                           <div class="trailer_block_preview_img_wrapper">
@@ -726,7 +720,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="trailer_block_preview_wrapper">
+                    <div class="trailer_block_preview_wrapper col-12 col-md-6 justify-content-center">
                       <div class="trailer_block_preview">
                         <div class="flex_wrapper_left">
                           <div class="trailer_block_preview_img_wrapper">
@@ -742,431 +736,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer6.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer1.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer2.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer3.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer4.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer5.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer6.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer1.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer2.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer3.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer4.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer5.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer6.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer1.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer2.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer3.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer4.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer5.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer6.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer1.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer2.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer3.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer4.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="trailer_block_preview_wrapper">
-                      <div class="trailer_block_preview">
-                        <div class="flex_wrapper_left">
-                          <div class="trailer_block_preview_img_wrapper">
-                            <div class="trailer_block_preview_play trailer_block_preview_play_triangle">
-                            </div>
-                            <div class="trailer_block_preview_hover_color"></div>
-                            <img src="img/trailers/trailer5.jpg" alt="img" />
-                          </div>
-                        </div>
-                        <div class="flex_wrapper_right">
-                          <h2 class="trailer_block_preview_title">Lorem ipsum</h2>
-                          <p class="trailer_block_preview_description">Lorem ipsum dolor sit amet.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="trailer_block_preview_wrapper">
+                    <div class="trailer_block_preview_wrapper col-12 col-md-6 justify-content-center">
                       <div class="trailer_block_preview">
                         <div class="flex_wrapper_left">
                           <div class="trailer_block_preview_img_wrapper">
@@ -1193,11 +763,11 @@
   </div>
   <div class="articles">
     <div class="container">
-      <div class="articles_head row">
-        <div class="articles_title">
-          <span class="articles_title_name">Статьи</span>
-          <a class="articles_title_all" href="#">
-            <span class="articles_title_name_span">Все&nbsp;статьи</span>
+      <div class="chapter_header articles_head">
+        <div class="chapter_title articles_title">
+          <span class="chapter_title_name articles_title_name">Статьи</span>
+          <a class="chapter_title_all articles_title_all" href="#">
+            <span class="chapter_title_name_span articles_title_name_span">Все&nbsp;статьи</span>
           </a>
         </div>
         <button class="btn btn-secondary add_more_button add_article">Добавить статью&nbsp;<strong>+</strong></button>
@@ -1380,30 +950,41 @@
       </div>
     </div>
   </div>
-  <div class="add_more">
+  <div class="add_more container justify-content-center">
     <button type="button" class="btn btn-secondary add_more_button">Подгрузить еще</button>
   </div>
   <footer>
-    <div class="footer_description">
-      <div class="running_icon"></div>
-      <a class="twitter_icon" href="#"><i class="icon-twitter"></i></a>
-      <a class="facebook_icon" href="#"><i class="icon-facebook2"></i></a>
-      <a class="ball_icon" href="#"><i class="icon-dribbble"></i></a>
-      <a class="google_icon" href="#"><i class="icon-google2"></i></a>
-      <a class="linkedin_icon" href="#"><i class="icon-linkedin"></i></a>
-      <div class="footer_description_text_wrapper">
-        <h2 class="footer_description_header">Lorem ipsum.</h2>
-        <p class="footer_description_text">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
-          assueverit.
-        </p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-lg-1"></div>
+        <div class="footer_description col-md-6 col-lg-4">
+          <div class="row">
+            <div class="running_icon"></div>
+            <a class="twitter_icon" href="#"><i class="icon-twitter"></i></a>
+            <a class="facebook_icon" href="#"><i class="icon-facebook2"></i></a>
+            <a class="ball_icon" href="#"><i class="icon-dribbble"></i></a>
+            <a class="google_icon" href="#"><i class="icon-google2"></i></a>
+            <a class="linkedin_icon" href="#"><i class="icon-linkedin"></i></a>
+          </div>
+          <div class="row footer_description_text_wrapper col-md-9">
+            <h2 class="footer_description_header">Lorem ipsum.</h2>
+            <p class="footer_description_text">Eu usu verear eruditi dolorem. Qui eu zril tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti has id, ne quo aliquam officiis
+              assueverit.
+            </p>
+          </div>
+          <div class="footer_img_man"></div>
+          <button type="button" class="btn btn-secondary footer_write_to_us_button">Написать нам</button>
+        </div>
+        <div class="offset-md-3 offset-lg-1"></div>
+        <div class="footer_warning_copyright_wrapper col-md-3 col-lg-6 align-items-end">
+          <div class="footer_18_warning">18+</div>
+          <div class="footer_copyright">
+            <span>Copyright &copy; 2001-2014<br>Все права защищены законодательством РФ. Использование материалов
+      возможно только с прямой ссылкой на источник</span>
+          </div>
+        </div>
       </div>
-      <img src="img/man.png" class="footer_img_man" alt="img" />
-      <button type="button" class="btn btn-secondary footer_write_to_us_button">Написать нам</button>
     </div>
-    <div class="footer_18_warning">18+</div>
-    <div class="footer_copyright">
-      <span>Copyright &copy; 2001-2014<br>Все права защищены законодательством РФ. Использование материалов
-    возможно только с прямой ссылкой на источник</span>
     </div>
     <div class="footer_decor">
       <div class="footer_decor_redline">
