@@ -62,3 +62,4 @@ typings/
 # generated css file
 public/css/*.css
 
+.idea
