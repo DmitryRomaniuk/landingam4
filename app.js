@@ -1,4 +1,5 @@
 const express = require('express');
+var helmet = require('helmet');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
@@ -17,6 +18,8 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(helmet());
+app.disable('x-powered-by');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.text({ type: 'text/html' }));
