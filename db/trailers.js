@@ -9,9 +9,4 @@ const trailers = new Schema({
 
 const myTrailers = mongoose.model('myTrailers', trailers);
 
-module.exports = myTrailers.find({})
-    .then(function (data) {
-        // console.log(data);
-        return data;
-    })
-    .catch(err => console.log(`Error in myTrailers model: ${err}`));
+module.exports = myTrailers;

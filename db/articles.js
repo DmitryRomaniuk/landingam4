@@ -14,9 +14,4 @@ const articles = new Schema({
 
 const myArticles = mongoose.model('myArticles', articles);
 
-module.exports = myArticles.find({})
-    .then(function (data) {
-        // console.log(data);
-        return data;
-    })
-    .catch(err => console.log(`Error in myArticles model: ${err}`));
+module.exports = myArticles;

@@ -13,9 +13,4 @@ const games = new Schema({
 
 const myGames = mongoose.model('myGames', games);
 
-module.exports = myGames.find({})
-    .then(function (data) {
-        // console.log(data);
-        return data;
-    })
-    .catch(err => console.log(`Error in myGames model: ${err}`));
+module.exports = myGames;

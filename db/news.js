@@ -9,9 +9,4 @@ const news = new Schema({
 
 const myNews = mongoose.model('myNews', news);
 
-module.exports = myNews.find({})
-    .then(function (data) {
-        // console.log(data);
-        return data;
-    })
-    .catch(err => console.log(`Error in myNews model: ${err}`));
+module.exports = myNews;

@@ -5,7 +5,9 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "nodemon ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint -c .eslintrc.js ./ --ext .js,.jsx",
+    "fixlint": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",

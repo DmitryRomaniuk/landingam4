@@ -10,7 +10,7 @@ livereload({ start: true });
 gulp.task('less', function () {
     return gulp.src('./src/styles/style.less')
         .pipe(less({
-            paths: [ path.join(__dirname) ]
+            paths: [path.join(__dirname)]
         }))
         .pipe(gulp.dest('./public/css'))
         .pipe(livereload());
