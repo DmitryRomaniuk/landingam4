@@ -1,16 +1,27 @@
 module.exports = {
     "parserOptions": {
         "ecmaVersion": 6,
-        "sourceType": "script",
+        "sourceType": "module",
         "ecmaFeatures": {
             "impliedStrict": true,
             "experimentalObjectRestSpread": true
         }
     },
     "env": {
-        "node": true
+        "browser": true,
+        "jest": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "airbnb",
+        "plugin:flowtype/recommended"
+    ],
+    "plugins": [
+        "flowtype",
+        "compat"
+    ],
+    "settings": {
+        "polyfills": ["fetch"]
+    },
     "rules": {
         "arrow-spacing": ["warn", { "before": true, "after": true }],
         "array-bracket-spacing": ["warn", "never"],
@@ -36,6 +47,11 @@ module.exports = {
         "no-mixed-requires": 2,
         "no-path-concat": 2,
         "no-process-exit": 2,
-        "no-restricted-modules": 2
+        "no-restricted-modules": 2,
+        "semi": [2, "always"],
+        "no-unexpected-multiline": 2,
+        "compat/compat": 2,
+        "max-len": 0,
+        "prefer-template": 0
     }
 };

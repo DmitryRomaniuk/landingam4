@@ -1,12 +1,14 @@
 const express = require('express');
+
 const router = express.Router();
 const articles = require('../db/articles');
 
 /* GET articles listing. */
-router.get('/', function (req, res) {
-    articles.find({}, null, {lean: true}).then(articlesList => {
-        const arr = articlesList.map(elem => {
+router.get('/', (req, res) => {
+    articles.find({}, null, { lean: true }).then((articlesList) => {
+        const arr = articlesList.map((elem) => {
             const article = Object.assign({}, elem);
+            // eslint-disable-next-line no-underscore-dangle
             delete article._id;
             return article;
         });
@@ -15,18 +17,18 @@ router.get('/', function (req, res) {
 });
 
 /* Save new article */
-router.post('/', function (req, res) {
+router.post('/', (req, res) => {
     console.log('Post request');
     console.log(req.body);
     res.append('Set-Cookie', 'foo=bar; Path=/; HttpOnly');
     res.append('Warning', '199 Miscellaneous warning');
-    res.cookie('some_cross_domain_cookie', 'http://mysubdomain.example.com', {domain: 'example.com', encode: String});
+    res.cookie('some_cross_domain_cookie', 'http://mysubdomain.example.com', { domain: 'example.com', encode: String });
     res.status(200).send('article saved');
     res.end();
 });
 
 /* Update article */
-router.put('/:articleId', function (req, res) {
+router.put('/:articleId', (req, res) => {
     console.log('delete request');
     console.log('Request Id:', req.params.articleId);
     console.log(req.body);
@@ -34,7 +36,7 @@ router.put('/:articleId', function (req, res) {
 });
 
 /* Delete article */
-router.delete('/:articleId', function (req, res) {
+router.delete('/:articleId', (req, res) => {
     console.log('delete request');
     console.log('Request Id:', req.params.articleId);
     console.log(req.body);

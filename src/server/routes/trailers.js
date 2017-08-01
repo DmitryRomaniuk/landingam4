@@ -1,12 +1,14 @@
 const express = require('express');
+
 const router = express.Router();
 const trailers = require('../db/trailers');
 
 /* GET trailers listing. */
-router.get('/', function (req, res) {
-    trailers.find({}, null, {lean: true}).then(trailersList => {
-        const arr = trailersList.map(elem => {
-            let trailer = Object.assign({}, elem);
+router.get('/', (req, res) => {
+    trailers.find({}, null, { lean: true }).then((trailersList) => {
+        const arr = trailersList.map((elem) => {
+            const trailer = Object.assign({}, elem);
+            // eslint-disable-next-line no-underscore-dangle
             delete trailer._id;
             return trailer;
         });
@@ -15,18 +17,18 @@ router.get('/', function (req, res) {
 });
 
 /* Save new trailer */
-router.post('/', function (req, res) {
+router.post('/', (req, res) => {
     console.log('Post request');
     console.log(req.body);
     res.append('Set-Cookie', 'foo=bar; Path=/; HttpOnly');
     res.append('Warning', '199 Miscellaneous warning');
-    res.cookie('some_cross_domain_cookie', 'http://mysubdomain.example.com', {domain: 'example.com', encode: String});
+    res.cookie('some_cross_domain_cookie', 'http://mysubdomain.example.com', { domain: 'example.com', encode: String });
     res.status(200).send('trailer saved');
     res.end();
 });
 
 /* Update trailer */
-router.put('/:trailerId', function (req, res) {
+router.put('/:trailerId', (req, res) => {
     console.log('delete request');
     console.log('Request Id:', req.params.trailerId);
     console.log(req.body);
@@ -34,7 +36,7 @@ router.put('/:trailerId', function (req, res) {
 });
 
 /* Delete trailer */
-router.delete('/:trailerId', function (req, res) {
+router.delete('/:trailerId', (req, res) => {
     console.log('delete request');
     console.log('Request Id:', req.params.trailerId);
     console.log(req.body);
