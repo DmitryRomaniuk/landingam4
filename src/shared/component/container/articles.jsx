@@ -2,7 +2,8 @@
 
 import React from 'react';
 import injectSheet from 'react-jss';
-
+import Article from '../article';
+import articles from '../../../server/db/articles';
 import {STATIC_PATH} from '../../config';
 
 const styles = {};
@@ -21,216 +22,23 @@ const Articles = ({classes}: { classes: Object }) =>
                     <strong>+</strong></button>
             </div>
             <div className="articles_main row">
-                <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
-                    <div className="article_block_preview">
-                        <div className="article_block_preview_header">
-                            <div className="article_block_preview_date_img_block">
-                                <div className="article_block_preview_date">
-                  <span className="article_block_preview_date_wrapper">
-                <span className="article_block_preview_date_number">02</span><br/>март
-                  </span>
-                                </div>
-                                <div className="article_block_preview_img">
-                                    <img src={STATIC_PATH + "/img/authors/author1.jpg"} alt="img"/>
-                                </div>
-                            </div>
-                            <div className="article_block_preview_name">
-                                <h2>Lorem ipsum</h2>
-                                <div className="article_block_preview_count_open"><i className="icon-rocket"/>24</div>
-                                <div className="article_block_preview_count_comment"><i className="icon-bubble2"/>32
-                                </div>
-                            </div>
-                        </div>
-                        <article className="article_block_preview_description_wrapper">
-                            <h3 className="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam
-                                assueverit</h3>
-                            <p className="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi
-                                nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
-                            </p>
-                            <p className="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril
-                                tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus
-                                urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti
-                                has id, ne quo aliquam officiis
-                                assueverit.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-                <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
-                    <div className="article_block_preview">
-                        <div className="article_block_preview_header">
-                            <div className="article_block_preview_date_img_block">
-                                <div className="article_block_preview_date">
-                  <span className="article_block_preview_date_wrapper">
-                <span className="article_block_preview_date_number">02</span><br/>март
-                  </span>
-                                </div>
-                                <div className="article_block_preview_img">
-                                    <img src={STATIC_PATH + "/img/authors/author2.jpg"} alt="img"/>
-                                </div>
-                            </div>
-                            <div className="article_block_preview_name">
-                                <h2>Lorem ipsum</h2>
-                                <div className="article_block_preview_count_open"><i className="icon-rocket"/>24</div>
-                                <div className="article_block_preview_count_comment"><i className="icon-bubble2"/>32
-                                </div>
-                            </div>
-                        </div>
-                        <article className="article_block_preview_description_wrapper">
-                            <h3 className="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam
-                                assueverit</h3>
-                            <p className="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi
-                                nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
-                            </p>
-                            <p className="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril
-                                tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus
-                                urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti
-                                has id, ne quo aliquam officiis
-                                assueverit.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-                <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
-                    <div className="article_block_preview">
-                        <div className="article_block_preview_header">
-                            <div className="article_block_preview_date_img_block">
-                                <div className="article_block_preview_date">
-                  <span className="article_block_preview_date_wrapper">
-                <span className="article_block_preview_date_number">02</span><br/>март
-                  </span>
-                                </div>
-                                <div className="article_block_preview_img">
-                                    <img src={STATIC_PATH + "/img/authors/author3.jpg"} alt="img"/>
-                                </div>
-                            </div>
-                            <div className="article_block_preview_name">
-                                <h2>Lorem ipsum</h2>
-                                <div className="article_block_preview_count_open"><i className="icon-rocket"/>24</div>
-                                <div className="article_block_preview_count_comment"><i className="icon-bubble2"/>32
-                                </div>
-                            </div>
-                        </div>
-                        <article className="article_block_preview_description_wrapper">
-                            <h3 className="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam
-                                assueverit</h3>
-                            <p className="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi
-                                nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
-                            </p>
-                            <p className="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril
-                                tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus
-                                urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti
-                                has id, ne quo aliquam officiis
-                                assueverit.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-                <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
-                    <div className="article_block_preview">
-                        <div className="article_block_preview_header">
-                            <div className="article_block_preview_date_img_block">
-                                <div className="article_block_preview_date">
-                  <span className="article_block_preview_date_wrapper">
-                <span className="article_block_preview_date_number">02</span><br/>март
-                  </span>
-                                </div>
-                                <div className="article_block_preview_img">
-                                    <img src={STATIC_PATH + "/img/authors/author3.jpg"} alt="img"/>
-                                </div>
-                            </div>
-                            <div className="article_block_preview_name">
-                                <h2>Lorem ipsum</h2>
-                                <div className="article_block_preview_count_open"><i className="icon-rocket"/>24</div>
-                                <div className="article_block_preview_count_comment"><i className="icon-bubble2"/>32
-                                </div>
-                            </div>
-                        </div>
-                        <article className="article_block_preview_description_wrapper">
-                            <h3 className="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam
-                                assueverit</h3>
-                            <p className="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi
-                                nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
-                            </p>
-                            <p className="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril
-                                tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus
-                                urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti
-                                has id, ne quo aliquam officiis
-                                assueverit.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-                <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
-                    <div className="article_block_preview">
-                        <div className="article_block_preview_header">
-                            <div className="article_block_preview_date_img_block">
-                                <div className="article_block_preview_date">
-                  <span className="article_block_preview_date_wrapper">
-                <span className="article_block_preview_date_number">02</span><br/>март
-                  </span>
-                                </div>
-                                <div className="article_block_preview_img">
-                                    <img src={STATIC_PATH + "/img/authors/author5.jpg"} alt="img"/>
-                                </div>
-                            </div>
-                            <div className="article_block_preview_name">
-                                <h2>Lorem ipsum</h2>
-                                <div className="article_block_preview_count_open"><i className="icon-rocket"/>24</div>
-                                <div className="article_block_preview_count_comment"><i className="icon-bubble2"/>32
-                                </div>
-                            </div>
-                        </div>
-                        <article className="article_block_preview_description_wrapper">
-                            <h3 className="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam
-                                assueverit</h3>
-                            <p className="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi
-                                nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
-                            </p>
-                            <p className="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril
-                                tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus
-                                urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti
-                                has id, ne quo aliquam officiis
-                                assueverit.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-                <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
-                    <div className="article_block_preview">
-                        <div className="article_block_preview_header">
-                            <div className="article_block_preview_date_img_block">
-                                <div className="article_block_preview_date">
-                  <span className="article_block_preview_date_wrapper">
-                <span className="article_block_preview_date_number">02</span><br/>март
-                  </span>
-                                </div>
-                                <div className="article_block_preview_img">
-                                    <img src={STATIC_PATH + "/img/authors/author6.jpg"} alt="img"/>
-                                </div>
-                            </div>
-                            <div className="article_block_preview_name">
-                                <h2>Lorem ipsum</h2>
-                                <div className="article_block_preview_count_open"><i className="icon-rocket"/>24</div>
-                                <div className="article_block_preview_count_comment"><i className="icon-bubble2"/>32
-                                </div>
-                            </div>
-                        </div>
-                        <article className="article_block_preview_description_wrapper">
-                            <h3 className="article_block_preview_title">Lorem ipsum dolor sit amet, ut mei agam
-                                assueverit</h3>
-                            <p className="article_block_preview_short">Ea facilisi honestatis sea. An aperiam salutandi
-                                nam. Sea harum maiorum dissentiet eu. Doctus nominati pericula ut his.
-                            </p>
-                            <p className="article_block_preview_description">Eu usu verear eruditi dolorem. Qui eu zril
-                                tibique fabellas. Ut eius neglegentur nec, ne dolore soluta eos, eu veri habemus
-                                urbanitas mea. Et quot adolescens vim. Est populo tractatos explicari ut, minim everti
-                                has id, ne quo aliquam officiis
-                                assueverit.
-                            </p>
-                        </article>
-                    </div>
-                </div>
+                { articles.find({}, null, { lean: true }).then((articlesList) => {
+                        return articlesList.map((elem) => {
+                            const article = Object.assign({}, elem);
+                            // eslint-disable-next-line no-underscore-dangle
+                            delete article._id;
+                            // return article;
+                            return <Article title={article.title}
+                                            description={article.description}
+                                            text={article.text}
+                                            avatarUrl={article.avatarUrl}
+                                            likes={article.likes}
+                                            comments={article.comments}
+                                            date={article.date}
+                                            author={article.author} />
+                        });
+                    })
+                }
             </div>
         </div>
         <div className="add_more container justify-content-center">
