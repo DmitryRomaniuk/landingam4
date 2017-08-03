@@ -6,16 +6,18 @@ import moment from 'moment';
 
 const styles = {};
 
-const Article = ({title, description, text, avatarUrl, likes, comments, date, author, classes}: { classes: Object }) =>
+const Article = ({title, description, text, avatarUrl, likes, comments, date, author, classes}: 
+ {title: string, description: string, text: string, avatarUrl: string, 
+ likes: number, comments: number, date: number, author: string, classes: Object }) =>
     <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
         <div className="article_block_preview">
             <div className="article_block_preview_header">
                 <div className="article_block_preview_date_img_block">
                     <div className="article_block_preview_date">
-                                  <span className="article_block_preview_date_wrapper">
-                                      <span className="article_block_preview_date_number">{ moment(date, 'x').date() }</span>
-                                      <br/>{moment(date, 'x').format('MMMM')}
-                                  </span>
+                        <span className="article_block_preview_date_wrapper">
+                            <span className="article_block_preview_date_number">{ moment(date, 'x').date() }</span>
+                            <br/>{moment(date, 'x').format('MMMM')}
+                        </span>
                     </div>
                     <div className="article_block_preview_img">
                         <img src={avatarUrl} alt="img"/>

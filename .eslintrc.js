@@ -52,6 +52,7 @@ module.exports = {
         "no-unexpected-multiline": 2,
         "compat/compat": 2,
         "max-len": 0,
-        "prefer-template": 0
+        "prefer-template": 0,
+        "linebreak-style": ["error", "windows"]
     }
 };

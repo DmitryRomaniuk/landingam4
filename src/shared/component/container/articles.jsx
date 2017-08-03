@@ -3,12 +3,11 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import Article from '../article';
-import articles from '../../../server/db/articles';
 import {STATIC_PATH} from '../../config';
 
 const styles = {};
 
-const Articles = ({classes}: { classes: Object }) =>
+const Articles = ({articles, classes}: { articles: Array<mixed>, classes: Object }) =>
     <div className="articles">
         <div className="container">
             <div className="chapter_header articles_head">
@@ -22,22 +21,20 @@ const Articles = ({classes}: { classes: Object }) =>
                     <strong>+</strong></button>
             </div>
             <div className="articles_main row">
-                { articles.find({}, null, { lean: true }).then((articlesList) => {
-                        return articlesList.map((elem) => {
-                            const article = Object.assign({}, elem);
-                            // eslint-disable-next-line no-underscore-dangle
-                            delete article._id;
-                            // return article;
-                            return <Article title={article.title}
-                                            description={article.description}
-                                            text={article.text}
-                                            avatarUrl={article.avatarUrl}
-                                            likes={article.likes}
-                                            comments={article.comments}
-                                            date={article.date}
-                                            author={article.author} />
-                        });
-                    })
+                {  articles.map((elem) => {
+                    const article = Object.assign({}, elem);
+                    // eslint-disable-next-line no-underscore-dangle
+                    delete article._id;
+                    // return article;
+                    return <Article title={article.title}
+                                    description={article.description}
+                                    text={article.text}
+                                    avatarUrl={article.avatarUrl}
+                                    likes={article.likes}
+                                    comments={article.comments}
+                                    date={article.date}
+                                    author={article.author} />
+                })
                 }
             </div>
         </div>
