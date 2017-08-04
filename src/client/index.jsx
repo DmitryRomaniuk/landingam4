@@ -12,24 +12,28 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import Tether from 'tether';
 import { reducer as reduxFormReducer } from 'redux-form';
+import 'bootstrap';
+import './css/style.less';
 
 import App from '../shared/app';
 import { APP_CONTAINER_SELECTOR, JSS_SSR_SELECTOR } from '../shared/config';
 import helloReducer from '../shared/reducer/hello';
+import articlesReducer from '../shared/reducer/articles';
 import { isProd } from '../shared/util';
 
 window.Tether = Tether;
-import 'bootstrap';
-import './css/style.less';
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = (isProd ? null : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 const preloadedState = window.__PRELOADED_STATE__;
 /* eslint-enable no-underscore-dangle */
 
 const store = createStore(combineReducers(
-  { hello: helloReducer, form: reduxFormReducer }),
-  { hello: Immutable.fromJS(preloadedState.hello) },
-  composeEnhancers(applyMiddleware(thunkMiddleware)));
+    { hello: helloReducer, articles: articlesReducer, form: reduxFormReducer }),
+    {
+        hello: Immutable.fromJS(preloadedState.hello),
+        articles: Immutable.fromJS(preloadedState.articles),
+    },
+    composeEnhancers(applyMiddleware(thunkMiddleware)));
 
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR);
 
@@ -45,9 +49,9 @@ const wrapApp = (AppComponent, reduxStore) =>
 ReactDOM.render(wrapApp(App, store), rootEl);
 
 if (module.hot) {
-  // flow-disable-next-line
+    // flow-disable-next-line
     module.hot.accept('../shared/app', () => {
-    // eslint-disable-next-line global-require
+        // eslint-disable-next-line global-require
         const NextApp = require('../shared/app').default;
         ReactDOM.render(wrapApp(NextApp, store), rootEl);
     });

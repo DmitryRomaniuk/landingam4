@@ -2,15 +2,10 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import injectSheet from 'react-jss';
 
 import { APP_NAME } from '../../config';
 
-const styles = {
-
-};
-
-const LoginPage = ({ classes }: { classes: Object }) =>
+const LoginPage = () =>
   <div>
     <Helmet
       meta={[
@@ -20,4 +15,4 @@ const LoginPage = ({ classes }: { classes: Object }) =>
     />
   </div>;
 
-export default injectSheet(styles)(LoginPage);
+export default LoginPage;

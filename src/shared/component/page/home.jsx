@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import injectSheet from 'react-jss';
 
 import Modal from '../modal';
 import Slider from '../container/slider';
@@ -12,11 +11,7 @@ import Trailers from '../container/trailers';
 import Articles from '../container/articles';
 import { APP_NAME } from '../../config';
 
-const styles = {
-
-};
-
-const HomePage = ({ classes }: { classes: Object }) =>
+const HomePage = () => (
   <div>
     <Helmet
       meta={[
@@ -24,12 +19,13 @@ const HomePage = ({ classes }: { classes: Object }) =>
                 { property: 'og:title', content: APP_NAME },
       ]}
     />
-      <Slider />
-      <News />
-      <Games />
-      <Trailers />
-      <Articles />
-      <Modal />
-  </div>;
+    <Slider />
+    <News />
+    <Games />
+    <Trailers />
+    <Articles />
+    <Modal />
+  </div>
+    );
 
-export default injectSheet(styles)(HomePage);
+export default HomePage;
