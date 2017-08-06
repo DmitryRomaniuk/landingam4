@@ -19,6 +19,9 @@ import App from '../shared/app';
 import { APP_CONTAINER_SELECTOR, JSS_SSR_SELECTOR } from '../shared/config';
 import helloReducer from '../shared/reducer/hello';
 import articlesReducer from '../shared/reducer/articles';
+import gamesReducer from '../shared/reducer/games';
+import trailersReducer from '../shared/reducer/trailers';
+import newsReducer from '../shared/reducer/news';
 import { isProd } from '../shared/util';
 
 window.Tether = Tether;
@@ -28,10 +31,20 @@ const preloadedState = window.__PRELOADED_STATE__;
 /* eslint-enable no-underscore-dangle */
 
 const store = createStore(combineReducers(
-    { hello: helloReducer, articles: articlesReducer, form: reduxFormReducer }),
+    {
+        hello: helloReducer,
+        articles: articlesReducer,
+        games: gamesReducer,
+        news: newsReducer,
+        trailers: trailersReducer,
+        form: reduxFormReducer,
+    }),
     {
         hello: Immutable.fromJS(preloadedState.hello),
         articles: Immutable.fromJS(preloadedState.articles),
+        games: Immutable.fromJS(preloadedState.games),
+        news: Immutable.fromJS(preloadedState.news),
+        trailers: Immutable.fromJS(preloadedState.trailers),
     },
     composeEnhancers(applyMiddleware(thunkMiddleware)));
 

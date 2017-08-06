@@ -665,7 +665,7 @@ div {
         border-bottom: 1px solid transparent;
         .game_block_preview_wrapper {
             margin: 20px auto 100px;
-            .carousel-inner > .carousel-item > .container > .row:first-child {
+            .carousel-inner > .carousel-item > .container.row {
                 margin-top: 10px;
             }
         }
@@ -869,6 +869,7 @@ div {
                     }
                     .flex_wrapper_right {
                         flex-direction: column;
+                        width: 65%;
                     }
                     .trailer_block_preview_title {
                         font-family: @font-bold;
@@ -1129,6 +1130,12 @@ div {
             border: 2px solid @color-grey;
             &:hover {
                 background-color: @color-default;
+                .article_block_edit {
+                    display: inline;
+                }
+                .article_block_delete {
+                    display: inline;
+                }
             }
         }
         .article_block_preview_header {
@@ -1223,6 +1230,25 @@ div {
             }
             .article_block_preview_short {
                 font-style: italic;
+            }
+            .article_block_edit_delete_button () {
+                position: absolute;
+                bottom: 5px;
+                border: none;
+                background-color: transparent;
+                border-radius: 0;
+                display: none;
+                cursor: pointer;
+                color: white;
+                text-decoration: underline;
+                outline: none;
+            }
+            .article_block_edit {
+                .article_block_edit_delete_button ()
+            }
+            .article_block_delete {
+                .article_block_edit_delete_button ();
+                right: 10px;
             }
         }
     }

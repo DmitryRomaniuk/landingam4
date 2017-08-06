@@ -7,37 +7,33 @@ import {
     ARTICLE_ADD,
     ARTICLE_EDIT,
     ARTICLE_REMOVE,
+    ARTICLES_GET_ASYNC_REQUEST,
+    ARTICLES_GET_ASYNC_SUCCESS,
+    ARTICLES_GET_ASYNC_FAILURE,
+    ARTICLES_GET_ASYNC_SUCCESS_STATUS,
 } from '../action/articles';
 
 const initialState = Immutable.fromJS({
-    listArticles: [
-        {
-            title: '',
-            description: '',
-            text: '',
-            avatarUrl: '',
-            likes: 0,
-            comments: 0,
-            date: 0,
-            author: '',
-        },
-    ],
+    listArticles: [],
+    status: 'empty',
 });
 
 const articlesReducer = (state: Immut = initialState, action: { type: string, payload: any }) => {
     switch (action.type) {
     case ARTICLE_ADD:
-        return state.set('message', action.payload);
+        return state.set('listArticles', state.get('listArticles').push(Immutable.fromJS(action.payload)));
     case ARTICLE_EDIT:
         return state.set('message', action.payload);
     case ARTICLE_REMOVE:
-        return state.set('message', action.payload);
-    // case SAY_HELLO_ASYNC_REQUEST:
-    //     return state.set('messageAsync', 'Loading...');
-    // case SAY_HELLO_ASYNC_SUCCESS:
-    //     return state.set('messageAsync', action.payload);
-    // case SAY_HELLO_ASYNC_FAILURE:
-    //     return state.set('messageAsync', 'No message received, please check your connection');
+        return state.set('listArticles', state.get('listArticles').delete(action.payload));
+    case ARTICLES_GET_ASYNC_REQUEST:
+        return state.set('status', 'Loading...');
+    case ARTICLES_GET_ASYNC_SUCCESS_STATUS:
+        return state.set('status', 'Loaded');
+    case ARTICLES_GET_ASYNC_SUCCESS:
+        return state.set('listArticles', Immutable.fromJS(action.payload));
+    case ARTICLES_GET_ASYNC_FAILURE:
+        return state.set('status', 'No message received, please check your connection');
     default:
         return state;
     }

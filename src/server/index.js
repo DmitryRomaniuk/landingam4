@@ -13,7 +13,7 @@ const http = require('http');
  */
 
 // eslint-disable-next-line no-use-before-define
-const port = normalizePort(process.env.PORT || '8000');
+const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 console.log(`Server started on http://localhost:${port}`);
 /**
