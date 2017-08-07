@@ -10,20 +10,25 @@ import renderFieldInput from './renderFieldInput';
 import renderFieldTextArea from './renderFieldTextArea';
 import { articleAddAction } from '../../action/articles';
 
-function onSubmit(values, dispatch) {
+function onSubmit(values, dispatch, reset) {
     values.date = values.date || Date.now();
     values.likes = values.likes || 0;
     values.comments = values.comments || 0;
   // flow-disable-next-line
     $('.js-modal-form .close').click();
     const resultSubmit = submit(values);
-    return (resultSubmit === 'submited') ? dispatch(articleAddAction(values)) : resultSubmit;
+    if (resultSubmit === 'submited') {
+        dispatch(articleAddAction(values));
+        return dispatch(reset());
+    } else {
+        return resultSubmit;
+    }
 }
 
 const ArticlesForm = ({ handleSubmit, pristine, reset, error, submitting, onSubmit }: {
   handleSubmit: Function, pristine: boolean, error: ?boolean, reset: Function, onSubmit: Function, submitting: boolean
 }) => (
-  <form onSubmit={handleSubmit(onSubmit)} className="js-modal-form modal fade">
+  <form onSubmit={handleSubmit((values, dispatch) => onSubmit(values, dispatch, reset))} className="js-modal-form modal fade">
     <div className="modal-dialog">
       <div className="modal-content">
         <div className="modal-header">
