@@ -1,13 +1,11 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { newsGetAsync } from '../../action/news';
 
-import { STATIC_PATH } from '../../config';
-
-class News extends React.Component {
+class News extends Component {
     static defaultProps: Object;
 
     componentDidMount() {

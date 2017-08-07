@@ -1,13 +1,12 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { trailersGetAsync } from '../../action/trailers';
 import Trailer from '../trailer';
 
-
-class Trailers extends React.Component {
+class Trailers extends Component {
     static defaultProps: Object;
 
     componentDidMount() {

@@ -1,4 +1,5 @@
 // @flow
+/* global $ */
 
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
@@ -7,9 +8,22 @@ import warn from './warn';
 import submit from './submit';
 import renderFieldInput from './renderFieldInput';
 import renderFieldTextArea from './renderFieldTextArea';
+import { articleAddAction } from '../../action/articles';
 
-const ArticlesForm = ({ handleSubmit, pristine, reset, error, submitting }: {handleSubmit: Function, pristine: boolean, error: ?boolean, reset: Function, submitting: boolean}) => (
-  <form onSubmit={handleSubmit(submit)} className="js-modal-form modal fade">
+function onSubmit(values, dispatch) {
+    values.date = values.date || Date.now();
+    values.likes = values.likes || 0;
+    values.comments = values.comments || 0;
+  // flow-disable-next-line
+    $('.js-modal-form .close').click();
+    const resultSubmit = submit(values);
+    return (resultSubmit === 'submited') ? dispatch(articleAddAction(values)) : resultSubmit;
+}
+
+const ArticlesForm = ({ handleSubmit, pristine, reset, error, submitting, onSubmit }: {
+  handleSubmit: Function, pristine: boolean, error: ?boolean, reset: Function, onSubmit: Function, submitting: boolean
+}) => (
+  <form onSubmit={handleSubmit(onSubmit)} className="js-modal-form modal fade">
     <div className="modal-dialog">
       <div className="modal-content">
         <div className="modal-header">
@@ -88,12 +102,15 @@ const ArticlesForm = ({ handleSubmit, pristine, reset, error, submitting }: {han
               />
             </div>
           </div>
-          { error && <strong> {error} </strong>}
+          {error && <strong> {error} </strong>}
           <div className="modal-footer">
             <button type="submit" role="button" className="btn btn-success" disabled={submitting}>
                     Submit
                   </button>
-            <button type="button" role="button" className="btn btn-warning" disabled={pristine || submitting} onClick={reset}>
+            <button
+              type="button" role="button" className="btn btn-warning" disabled={pristine || submitting}
+              onClick={reset}
+            >
                     Clear Values
                   </button>
             <button type="button" role="button" className="btn btn-primary" data-dismiss="modal">Close</button>
@@ -105,7 +122,8 @@ const ArticlesForm = ({ handleSubmit, pristine, reset, error, submitting }: {han
     );
 
 export default reduxForm({
-    form: 'articles',
+    form: 'addArticle',
     validate,
     warn,
+    onSubmit,
 })(ArticlesForm);

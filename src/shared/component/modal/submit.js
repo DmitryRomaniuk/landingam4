@@ -1,10 +1,9 @@
 // @flow
+/* global $ */
 
 import { SubmissionError } from 'redux-form';
-import { articleAdd } from '../../action/articles';
 
 export default (values: { title: string, description: string, text: string, avatarUrl: string, author: string }) => {
-        // simulate server latency
     console.log(values);
     if (!values.title) {
         return new SubmissionError({
@@ -60,6 +59,5 @@ export default (values: { title: string, description: string, text: string, avat
     }
     // flow-disable-next-line
     $('.js-modal-form .close').click();
-    articleAdd(values);
-    return true;
+    return 'submited';
 };

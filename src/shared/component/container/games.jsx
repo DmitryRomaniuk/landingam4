@@ -1,13 +1,13 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { gamesGetAsync } from '../../action/games';
 import Game from '../game';
 
 
-class Games extends React.Component {
+class Games extends Component {
     static defaultProps: Object;
 
     componentDidMount() {

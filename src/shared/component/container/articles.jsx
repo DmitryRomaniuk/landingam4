@@ -1,12 +1,12 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { articleGetAsync, articleRemoveByNumber } from '../../action/articles';
 import Article from '../article';
 
-class Articles extends React.Component {
+class Articles extends Component {
     static defaultProps: Object;
 
     componentDidMount() {
@@ -33,7 +33,7 @@ class Articles extends React.Component {
             <div className="articles_main row">
               {this.props.articles.map((elem, index) => {
                   const article = Object.assign({}, elem);
-                        // eslint-disable-next-line no-underscore-dangle
+                  // eslint-disable-next-line no-underscore-dangle
                   delete article._id;
                   return (<Article
                     key={article.date}
