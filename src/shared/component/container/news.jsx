@@ -8,6 +8,8 @@ import { newsGetAsync } from '../../action/news';
 import { STATIC_PATH } from '../../config';
 
 class News extends React.Component {
+    static defaultProps: Object;
+
     componentDidMount() {
         this.props.newsGetAsync();
     }

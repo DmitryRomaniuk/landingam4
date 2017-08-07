@@ -1,5 +1,10 @@
 [options]
 suppress_comment= \\(.\\|\n\\)*\\flow-disable-next-line
+module.file_ext=.css
+module.file_ext=.less
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
 
 [ignore]
 .*/node_modules/jss/.*

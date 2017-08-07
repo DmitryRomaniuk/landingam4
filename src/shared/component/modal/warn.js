@@ -1,6 +1,6 @@
 // @flow
 
-export default (values) => {
+export default (values: { age: number }) => {
     const warnings = {};
     if (values.age < 19) {
         warnings.age = 'Hmm, you seem a bit young...';

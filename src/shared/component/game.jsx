@@ -3,7 +3,7 @@
 import React from 'react';
 
 const Game = ({ title, description, imgUrl, platforms, likes, comments, rating }: {
-    title: string, description: string, imgUrl: string, platforms: array,
+    title: string, description: string, imgUrl: string, platforms: Array<string>,
     likes: number, comments: number, rating: number
 }) =>
   <div className="game_block_preview col-12 col-lg-6 ">

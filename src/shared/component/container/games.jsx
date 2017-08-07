@@ -8,6 +8,8 @@ import Game from '../game';
 
 
 class Games extends React.Component {
+    static defaultProps: Object;
+
     componentDidMount() {
         this.props.gamesGetAsync();
     }
@@ -151,7 +153,15 @@ class Games extends React.Component {
 Games.propTypes = {
     // eslint-disable-next-line react/require-default-props
     gamesGetAsync: PropTypes.func,
-    games: PropTypes.any,
+    games: PropTypes.shape([{
+        title: PropTypes.string,
+        description: PropTypes.string,
+        imgUrl: PropTypes.string,
+        platforms: PropTypes.arrayOf(PropTypes.string),
+        likes: PropTypes.number,
+        comments: PropTypes.number,
+        rating: PropTypes.number,
+    }]),
 };
 
 Games.defaultProps = {

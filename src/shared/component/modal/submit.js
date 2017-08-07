@@ -3,7 +3,7 @@
 import { SubmissionError } from 'redux-form';
 import { articleAdd } from '../../action/articles';
 
-export default (values) => {
+export default (values: { title: string, description: string, text: string, avatarUrl: string, author: string }) => {
         // simulate server latency
     console.log(values);
     if (!values.title) {
@@ -58,6 +58,7 @@ export default (values) => {
             _error: 'Fill the form, please!',
         });
     }
+    // flow-disable-next-line
     $('.js-modal-form .close').click();
     articleAdd(values);
     return true;

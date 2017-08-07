@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const DeleteButton = ({ ifClick }: { ifClick: func}) =>
+const DeleteButton = ({ ifClick }: { ifClick: Function}) =>
   <button
     onClick={() => { ifClick(); }}
     className="article_block_delete"

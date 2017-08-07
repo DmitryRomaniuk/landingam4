@@ -8,7 +8,7 @@ import submit from './submit';
 import renderFieldInput from './renderFieldInput';
 import renderFieldTextArea from './renderFieldTextArea';
 
-const ArticlesForm = ({ handleSubmit, pristine, reset, error, submitting }: {handleSubmit: func, pristine: boolean, error: boolean, reset: func, submitting: boolean}) => (
+const ArticlesForm = ({ handleSubmit, pristine, reset, error, submitting }: {handleSubmit: Function, pristine: boolean, error: ?boolean, reset: Function, submitting: boolean}) => (
   <form onSubmit={handleSubmit(submit)} className="js-modal-form modal fade">
     <div className="modal-dialog">
       <div className="modal-content">

@@ -7,6 +7,8 @@ import { articleGetAsync, articleRemoveByNumber } from '../../action/articles';
 import Article from '../article';
 
 class Articles extends React.Component {
+    static defaultProps: Object;
+
     componentDidMount() {
         this.props.articleGetAsync();
     }

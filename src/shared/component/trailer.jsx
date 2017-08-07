@@ -3,7 +3,7 @@
 import React from 'react';
 
 export default ({ title, genre, imgUrl }: {
-    title: string, genre: string, imgUrl: string
+    title: string, genre: Array<string>, imgUrl: string
 }) =>
   <div
     className="trailer_block_preview_wrapper row col-12 col-md-6 justify-content-center"

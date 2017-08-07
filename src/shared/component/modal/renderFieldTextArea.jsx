@@ -3,7 +3,7 @@
 import React from 'react';
 
 export default ({ input, label, type, meta: { touched, error, warning } }: {
-    input: string, label: string, type: string, meta: Object
+    input: Object, label: string, type: string, meta: Object
 }) => (
   <div>
     <label>

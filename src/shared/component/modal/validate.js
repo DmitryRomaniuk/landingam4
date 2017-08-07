@@ -1,7 +1,7 @@
 // @flow
 
 
-export default (values) => {
+export default (values: { title: string, description: string, text: string, avatarUrl: string, author: string }) => {
     const errors = {};
     if (!values.title) {
         errors.title = 'Required';

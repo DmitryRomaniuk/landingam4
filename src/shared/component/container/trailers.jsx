@@ -8,6 +8,8 @@ import Trailer from '../trailer';
 
 
 class Trailers extends React.Component {
+    static defaultProps: Object;
+
     componentDidMount() {
         this.props.trailersGetAsync();
     }

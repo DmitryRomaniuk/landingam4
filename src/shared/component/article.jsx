@@ -11,7 +11,7 @@ function getMonth(date) {
 
 const Article = ({ title, description, text, avatarUrl, likes, comments, date, author, articleRemoveByNumber, index }: {
     title: string, description: string, text: string, avatarUrl: string,
-    likes: number, comments: number, date: number, author: string, articleRemoveByNumber: func, index: number
+    likes: number, comments: number, date: number, author: string, articleRemoveByNumber: Function, index: number
 }) => <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
   <div className="article_block_preview">
     <div className="article_block_preview_header">
