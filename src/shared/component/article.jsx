@@ -2,16 +2,15 @@
 
 import React from 'react';
 import moment from 'moment';
-import DeleteArticleButton from './delete-article-button';
 
 function getMonth(date) {
     const month = moment(date, 'x').format('MMMM');
     return (month === 'Invalid date') ? '' : month;
 }
 
-const Article = ({ title, description, text, avatarUrl, likes, comments, date, author, articleRemoveByNumber, index }: {
-    title: string, description: string, text: string, avatarUrl: string,
-    likes: ?number, comments: ?number, date: number, author: string, articleRemoveByNumber: Function, index: number
+const Article = ({ title, description, text, avatarUrl, likes, comments, date, author, articleRemoveByNumber, articleEditByNumber, articleFormToggleSwitch, index }: {
+    title: string, description: string, text: string, avatarUrl: string, articleFormToggleSwitch: Function,
+    likes: ?number, comments: ?number, date: number, author: string, articleRemoveByNumber: Function, articleEditByNumber: Function, index: number
 }) => <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
   <div className="article_block_preview">
     <div className="article_block_preview_header">
@@ -43,12 +42,15 @@ const Article = ({ title, description, text, avatarUrl, likes, comments, date, a
       </p>
       <button
         className="article_block_edit" data-toggle="modal"
-        data-target=".js-modal-form"
+        onClick={() => { articleFormToggleSwitch();
+            articleEditByNumber(index); }}
       >Edit</button>
-      <DeleteArticleButton
-        className="article_block_delete"
-        ifClick={() => { articleRemoveByNumber(index); }}
-      >Delete</DeleteArticleButton>
+      <button
+          onClick={() => { articleRemoveByNumber(index); }}
+          className="article_block_delete"
+          type="button"
+          role="button"
+      >Delete</button>
     </article>
   </div>
 </div>;

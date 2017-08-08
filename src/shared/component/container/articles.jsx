@@ -3,14 +3,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { articleGetAsync, articleRemoveByNumber } from '../../action/articles';
+import { articleGetAsync, articleRemoveByNumber, articleFormToggleSwitch, articleEditByNumber } from '../../action/articles';
 import Article from '../article';
 
 class Articles extends Component {
     static defaultProps: Object;
 
+    constructor(props) {
+        super(props);
+        this.addArticleEmpty = this.addArticleEmpty.bind(this);
+    }
+
     componentDidMount() {
         this.props.articleGetAsync();
+    }
+
+    addArticleEmpty() {
+        this.props.articleFormToggleSwitch();
+        this.props.articleEditByNumber(-1);
     }
 
     render() {
@@ -27,6 +37,7 @@ class Articles extends Component {
                 className="btn btn-secondary add_more_button add_article"
                 data-toggle="modal"
                 data-target=".js-modal-form"
+                onClick={ this.addArticleEmpty }
               >Добавить статью&nbsp;
                         <strong>+</strong></button>
             </div>
@@ -47,6 +58,8 @@ class Articles extends Component {
                     author={article.title}
                     index={index}
                     articleRemoveByNumber={this.props.articleRemoveByNumber}
+                    articleEditByNumber={this.props.articleEditByNumber}
+                    articleFormToggleSwitch={this.props.articleFormToggleSwitch}
                   />);
               })}
             </div>
@@ -91,4 +104,6 @@ const mapStateToProps = state => ({
     articles: state.articles.get('listArticles').toJS(),
 });
 
-export default connect(mapStateToProps, { articleGetAsync, articleRemoveByNumber })(Articles);
+export default connect(mapStateToProps, {
+    articleGetAsync, articleRemoveByNumber, articleFormToggleSwitch, articleEditByNumber
+})(Articles);

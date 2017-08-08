@@ -3,7 +3,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import Modal from '../modal/modal';
+import Modal from '../modal/react-modal';
 import Slider from '../container/slider';
 import News from '../container/news';
 import Games from '../container/games';
