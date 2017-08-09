@@ -42,14 +42,16 @@ const Article = ({ title, description, text, avatarUrl, likes, comments, date, a
       </p>
       <button
         className="article_block_edit" data-toggle="modal"
-        onClick={() => { articleFormToggleSwitch();
-            articleEditByNumber(index); }}
+        onClick={() => {
+            articleFormToggleSwitch();
+            articleEditByNumber(index);
+        }}
       >Edit</button>
       <button
-          onClick={() => { articleRemoveByNumber(index); }}
-          className="article_block_delete"
-          type="button"
-          role="button"
+        onClick={() => { articleRemoveByNumber(index); }}
+        className="article_block_delete"
+        type="button"
+        role="button"
       >Delete</button>
     </article>
   </div>

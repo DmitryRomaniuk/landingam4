@@ -20,7 +20,7 @@ class Articles extends Component {
 
     addArticleEmpty() {
         this.props.articleFormToggleSwitch();
-        this.props.articleEditByNumber(-1);
+        this.props.articleEditByNumber(this.props.articles.length);
     }
 
     render() {
@@ -37,7 +37,7 @@ class Articles extends Component {
                 className="btn btn-secondary add_more_button add_article"
                 data-toggle="modal"
                 data-target=".js-modal-form"
-                onClick={ this.addArticleEmpty }
+                onClick={this.addArticleEmpty}
               >Добавить статью&nbsp;
                         <strong>+</strong></button>
             </div>
@@ -105,5 +105,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-    articleGetAsync, articleRemoveByNumber, articleFormToggleSwitch, articleEditByNumber
+    articleGetAsync, articleRemoveByNumber, articleFormToggleSwitch, articleEditByNumber,
 })(Articles);

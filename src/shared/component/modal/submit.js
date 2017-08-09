@@ -10,9 +10,9 @@ export default (values: { title: string, description: string, text: string, avat
             username: 'Title is empty',
             _error: 'Fill the form, please!',
         });
-    } else if (values.title.length > 15) {
+    } else if (values.title.length > 150) {
         return new SubmissionError({
-            username: 'Must be 15 characters or less',
+            username: 'Must be 150 characters or less',
             _error: 'Fill the form, please!',
         });
     } else if (!values.description) {
@@ -20,9 +20,9 @@ export default (values: { title: string, description: string, text: string, avat
             username: 'Description is empty',
             _error: 'Fill the form, please!',
         });
-    } else if (values.description.length > 15) {
+    } else if (values.description.length > 150) {
         return new SubmissionError({
-            username: 'Must be 15 characters or less',
+            username: 'Must be 150 characters or less',
             _error: 'Fill the form, please!',
         });
     } else if (!values.text) {
@@ -30,9 +30,9 @@ export default (values: { title: string, description: string, text: string, avat
             username: 'Text field is empty',
             _error: 'Fill the form, please!',
         });
-    } else if (values.text.length > 150) {
+    } else if (values.text.length > 1500) {
         return new SubmissionError({
-            username: 'Must be 150 characters or less',
+            username: 'Must be 1500 characters or less',
             _error: 'Fill the form, please!',
         });
     } else if (!values.avatarUrl) {
@@ -51,9 +51,9 @@ export default (values: { title: string, description: string, text: string, avat
             username: 'Author is empty',
             _error: 'Fill the form, please!',
         });
-    } else if (values.author.length > 15) {
+    } else if (values.author.length > 150) {
         return new SubmissionError({
-            username: 'Must be 15 characters or less',
+            username: 'Must be 150 characters or less',
             _error: 'Fill the form, please!',
         });
     }

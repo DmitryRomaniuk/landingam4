@@ -18,13 +18,13 @@ const initialState = Immutable.fromJS({
     listArticles: [],
     status: 'empty',
     modal: false,
-    number: -1,
+    number: 0,
 });
 
 const articlesReducer = (state: Immut = initialState, action: { type: string, payload: any }) => {
     switch (action.type) {
     case ARTICLE_ADD:
-        return state.set('listArticles', state.get('listArticles').push(Immutable.fromJS(action.payload)));
+        return state.set('listArticles', state.get('listArticles').set(state.get('number'), Immutable.fromJS(action.payload)));
     case ARTICLES_FORM_TOGGLE:
         return state.set('modal', !state.get('modal'));
     case ARTICLE_EDIT:
