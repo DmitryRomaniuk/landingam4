@@ -161,7 +161,7 @@ ArticlesForm.propTypes = {
     pristine: PropTypes.bool,
     reset: PropTypes.func,
     error: PropTypes.bool,
-    submitting: PropTypes.func,
+    submitting: PropTypes.bool,
     onSubmit: PropTypes.bool,
     isOpen: PropTypes.bool,
     articleFormToggleSwitch: PropTypes.func,

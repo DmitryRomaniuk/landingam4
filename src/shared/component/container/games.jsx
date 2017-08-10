@@ -153,7 +153,7 @@ class Games extends Component {
 Games.propTypes = {
     // eslint-disable-next-line react/require-default-props
     gamesGetAsync: PropTypes.func,
-    games: PropTypes.shape([{
+    games: PropTypes.arrayOf(PropTypes.shape({
         title: PropTypes.string,
         description: PropTypes.string,
         imgUrl: PropTypes.string,
@@ -161,7 +161,7 @@ Games.propTypes = {
         likes: PropTypes.number,
         comments: PropTypes.number,
         rating: PropTypes.number,
-    }]),
+    })),
 };
 
 Games.defaultProps = {
