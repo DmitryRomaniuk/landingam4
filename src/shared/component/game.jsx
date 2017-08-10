@@ -6,7 +6,7 @@ const Game = ({ title, description, imgUrl, platforms, likes, comments, rating }
     title: string, description: string, imgUrl: string, platforms: Array<string>,
     likes: number, comments: number, rating: number
 }) =>
-  <div className="game_block_preview col-12 col-lg-6 ">
+  <div className="row game_block_preview col-12 col-lg-6 ">
     <div className="col-12 col-sm">
       <div className="game_block_preview_img_wrapper">
         <img src={imgUrl} alt="img" />
