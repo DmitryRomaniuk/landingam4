@@ -19,7 +19,6 @@ export const ARTICLES_GET_ASYNC_FAILURE = 'ARTICLES_GET_ASYNC_FAILURE';
 export const articleAddAction = createAction(ARTICLE_ADD);
 export const articleEdit = createAction(ARTICLE_EDIT);
 export const articleRemove = createAction(ARTICLE_REMOVE);
-export const articleGet = createAction(ARTICLES_GET);
 export const articleFormAdd = createAction(ARTICLES_FORM_ADD);
 export const articleFormToggle = createAction(ARTICLES_FORM_TOGGLE);
 export const articleGetAsyncRequest = createAction(ARTICLES_GET_ASYNC_REQUEST);
@@ -37,7 +36,6 @@ export const articleAdd = (data: Object) => (dispatch: Function) => {
 
 export const articleEditByNumber = (num: number) => (dispatch: Function) => {
     dispatch(articleEdit(num));
-    // dispatch(articleFormToggle());
 };
 
 export const articleFormToggleSwitch = () => (dispatch: Function) => {
