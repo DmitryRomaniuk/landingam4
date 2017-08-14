@@ -60,3 +60,69 @@ export const articleGetAsync = () => (dispatch: Function) => {
             dispatch(articleGetAsyncFailure());
         });
 };
+
+export const articleSaveAsync = (data: Object) => (dispatch: Function) => {
+    dispatch(articleGetAsyncRequest(data));
+    return fetch(ARTICLES_PAGE_ROUTE, { method: 'POST',
+        headers: {
+            'Content-type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+        .then((res) => {
+            if (!res.ok) throw Error(res.statusText);
+            return res.json();
+        })
+        .then((dataRes) => {
+            if (!dataRes) throw Error('No message received');
+            dispatch(articleGetAsyncSuccess(dataRes));
+            dispatch(articleGetAsyncSuccessStatus());
+        })
+        .catch(() => {
+            dispatch(articleGetAsyncFailure());
+        });
+};
+
+export const articleEditAsync = (data: Object) => (dispatch: Function) => {
+    dispatch(articleGetAsyncRequest(data));
+    return fetch(ARTICLES_PAGE_ROUTE, { method: 'PUT',
+        headers: {
+            'Content-type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+        .then((res) => {
+            if (!res.ok) throw Error(res.statusText);
+            return res.json();
+        })
+        .then((dataRes) => {
+            if (!dataRes) throw Error('No message received');
+            dispatch(articleGetAsyncSuccess(dataRes));
+            dispatch(articleGetAsyncSuccessStatus());
+        })
+        .catch(() => {
+            dispatch(articleGetAsyncFailure());
+        });
+};
+
+export const articleDeleteAsync = (id: string) => (dispatch: Function) => {
+    dispatch(articleGetAsyncRequest(id));
+    return fetch(ARTICLES_PAGE_ROUTE, { method: 'DELETE',
+        headers: {
+            'Content-type': 'text/plain',
+        },
+        body: id,
+    })
+        .then((res) => {
+            if (!res.ok) throw Error(res.statusText);
+            return res.json();
+        })
+        .then((data) => {
+            if (!data) throw Error('No message received');
+            dispatch(articleGetAsyncSuccess(data));
+            dispatch(articleGetAsyncSuccessStatus());
+        })
+        .catch(() => {
+            dispatch(articleGetAsyncFailure());
+        });
+};
