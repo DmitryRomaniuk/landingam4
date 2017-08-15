@@ -11,7 +11,7 @@ import warn from './warn';
 import submit from './submit';
 import renderFieldInput from './renderFieldInput';
 import renderFieldTextArea from './renderFieldTextArea';
-import { articleFormAdd, articleAddAction, articleFormToggleSwitch } from '../../action/articles';
+import { articleSaveAsync, articleEditAsync, articleFormToggleSwitch } from '../../action/articles';
 
 class ArticlesForm extends React.Component {
 
@@ -30,8 +30,13 @@ class ArticlesForm extends React.Component {
         $('.modal-dialog .close').click();
         // ToDo: create action for close modal
         const resultSubmit = submit(values);
+        const id = !!this.props.initialValues;
+        if (resultSubmit === 'submited' && id) {
+            dispatch(articleEditAsync(values));
+            return this.props.reset();
+        }
         if (resultSubmit === 'submited') {
-            dispatch(articleAddAction(values));
+            dispatch(articleSaveAsync(values));
             return this.props.reset();
         }
         return resultSubmit;
@@ -149,22 +154,22 @@ class ArticlesForm extends React.Component {
                             </button>
                 </ModalFooter>
               </form>
-              <div className="before-all-modal">
-                <div className="sk-circle">
-                  <div className="sk-circle1 sk-child" />
-                  <div className="sk-circle2 sk-child" />
-                  <div className="sk-circle3 sk-child" />
-                  <div className="sk-circle4 sk-child" />
-                  <div className="sk-circle5 sk-child" />
-                  <div className="sk-circle6 sk-child" />
-                  <div className="sk-circle7 sk-child" />
-                  <div className="sk-circle8 sk-child" />
-                  <div className="sk-circle9 sk-child" />
-                  <div className="sk-circle10 sk-child" />
-                  <div className="sk-circle11 sk-child" />
-                  <div className="sk-circle12 sk-child" />
-                </div>
-              </div>
+              {/*<div className="before-all-modal">*/}
+                {/*<div className="sk-circle">*/}
+                  {/*<div className="sk-circle1 sk-child" />*/}
+                  {/*<div className="sk-circle2 sk-child" />*/}
+                  {/*<div className="sk-circle3 sk-child" />*/}
+                  {/*<div className="sk-circle4 sk-child" />*/}
+                  {/*<div className="sk-circle5 sk-child" />*/}
+                  {/*<div className="sk-circle6 sk-child" />*/}
+                  {/*<div className="sk-circle7 sk-child" />*/}
+                  {/*<div className="sk-circle8 sk-child" />*/}
+                  {/*<div className="sk-circle9 sk-child" />*/}
+                  {/*<div className="sk-circle10 sk-child" />*/}
+                  {/*<div className="sk-circle11 sk-child" />*/}
+                  {/*<div className="sk-circle12 sk-child" />*/}
+                {/*</div>*/}
+              {/*</div>*/}
             </Modal>
           </div>
         );
@@ -206,10 +211,10 @@ ArticlesForm.propTypes = {
 const mapStateToProps = state => ({
     modal: state.articles.get('modal'),
     modalSpinner: state.articles.get('modalSpinner'),
-    initialValues: state.articles.get('listArticles').toJS()[state.articles.get('number')],
+    initialValues: state.articles.get('listArticles').toJS()[state.articles.get('listArticles').findIndex(elem => elem.get('id') === state.articles.get('id'))],
 });
 
-export default connect(mapStateToProps, { articleFormAdd, articleAddAction, articleFormToggleSwitch })(reduxForm({
+export default connect(mapStateToProps, { articleSaveAsync, articleFormToggleSwitch, articleEditAsync })(reduxForm({
     form: 'addArticle',
     validate,
     warn,

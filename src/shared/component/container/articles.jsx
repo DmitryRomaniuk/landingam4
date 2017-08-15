@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { articleGetAsync, articleRemoveByNumber, articleFormToggleSwitch, articleEditByNumber } from '../../action/articles';
+import { articleGetAsync, articleDeleteAsync, articleFormToggleSwitch, articleEditById, articleEditAsync } from '../../action/articles';
 import Article from '../article';
 
 class Articles extends Component {
@@ -20,7 +20,7 @@ class Articles extends Component {
 
     addArticleEmpty() {
         this.props.articleFormToggleSwitch();
-        this.props.articleEditByNumber(this.props.articles.length);
+        this.props.articleEditById('');
     }
 
     render() {
@@ -46,17 +46,19 @@ class Articles extends Component {
                   const article = Object.assign({}, elem);
                   return (<Article
                     key={article.id}
+                    id={article.id}
                     title={article.author}
                     description={article.description}
                     text={article.text}
                     avatarUrl={article.avatarUrl}
-                    likes={article.likes}
-                    comments={article.comments}
-                    date={article.date}
+                    likes={+article.likes}
+                    comments={+article.comments}
+                    date={+article.date}
                     author={article.title}
                     index={index}
-                    articleRemoveByNumber={this.props.articleRemoveByNumber}
-                    articleEditByNumber={this.props.articleEditByNumber}
+                    articleDeleteAsync={this.props.articleDeleteAsync}
+                    articleEditAsync={this.props.articleEditAsync}
+                    articleEditById={this.props.articleEditById}
                     articleFormToggleSwitch={this.props.articleFormToggleSwitch}
                   />);
               })}
@@ -78,7 +80,7 @@ Articles.propTypes = {
     // eslint-disable-next-line react/require-default-props
     articleGetAsync: PropTypes.func,
     // eslint-disable-next-line react/require-default-props
-    articleRemoveByNumber: PropTypes.func,
+    articleDeleteAsync: PropTypes.func,
     articles: PropTypes.any,
 };
 
@@ -103,5 +105,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-    articleGetAsync, articleRemoveByNumber, articleFormToggleSwitch, articleEditByNumber,
+    articleGetAsync, articleDeleteAsync, articleFormToggleSwitch, articleEditById, articleEditAsync
 })(Articles);

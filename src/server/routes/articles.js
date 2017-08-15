@@ -45,22 +45,17 @@ router.put('/:articleId', (req, res) => {
     console.log('delete request');
     console.log('Request Id:', req.params.articleId);
     console.log(req.body);
+    const articleUpdated = req.body;
     // res.status(200).send('article updated');
     articles.findByIdAndUpdate(
         { _id: req.params.articleId },
-        req.body, // document to insert
+        articleUpdated, // document to insert
         { upsert: false, new: false, runValidators: true },
-        (err, updatedArticle) => {
+        (err) => {
             if (err) {
                 return res.status(501).send('article don\'t updated ' + err);
             }
-            const articleMap = Object.assign({}, updatedArticle);
-            articleMap._doc = articleMap._doc || {};
-            const article = Object.assign({}, JSON.parse(JSON.stringify(articleMap._doc)));
-            article.id = article._id;
-            delete article._id;
-            delete article.__v;
-            return res.status(201).json(article);
+            return res.status(201).json(articleUpdated);
         },
     );
 });

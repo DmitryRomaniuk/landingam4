@@ -26,16 +26,16 @@ export const articleGetAsyncSuccess = createAction(ARTICLES_GET_ASYNC_SUCCESS);
 export const articleGetAsyncSuccessStatus = createAction(ARTICLES_GET_ASYNC_SUCCESS_STATUS);
 export const articleGetAsyncFailure = createAction(ARTICLES_GET_ASYNC_FAILURE);
 
-export const articleRemoveByNumber = (num: number) => (dispatch: Function) => {
-    dispatch(articleRemove(num));
+export const articleRemoveById = (id: string) => (dispatch: Function) => {
+    dispatch(articleRemove(id));
 };
 
 export const articleAdd = (data: Object) => (dispatch: Function) => {
     dispatch(articleAddAction(data));
 };
 
-export const articleEditByNumber = (num: number) => (dispatch: Function) => {
-    dispatch(articleEdit(num));
+export const articleEditById = (id: string) => (dispatch: Function) => {
+    dispatch(articleEdit(id));
 };
 
 export const articleFormToggleSwitch = () => (dispatch: Function) => {
@@ -73,7 +73,7 @@ export const articleSaveAsync = (data: Object) => (dispatch: Function) => {
         })
         .then((dataRes) => {
             if (!dataRes) throw Error('No message received');
-            dispatch(articleGetAsyncSuccess(dataRes));
+            dispatch(articleAddAction(dataRes));
             dispatch(articleGetAsyncSuccessStatus());
         })
         .catch(() => {
@@ -83,7 +83,7 @@ export const articleSaveAsync = (data: Object) => (dispatch: Function) => {
 
 export const articleEditAsync = (data: Object) => (dispatch: Function) => {
     dispatch(articleGetAsyncRequest(data));
-    return fetch(ARTICLES_PAGE_ROUTE, { method: 'PUT',
+    return fetch(ARTICLES_PAGE_ROUTE + '/' + data.id, { method: 'PUT',
         headers: {
             'Content-type': 'application/json',
         },
@@ -95,7 +95,8 @@ export const articleEditAsync = (data: Object) => (dispatch: Function) => {
         })
         .then((dataRes) => {
             if (!dataRes) throw Error('No message received');
-            dispatch(articleGetAsyncSuccess(dataRes));
+            dispatch(articleEdit(dataRes.id));
+            dispatch(articleAddAction(dataRes));
             dispatch(articleGetAsyncSuccessStatus());
         })
         .catch(() => {
@@ -105,7 +106,7 @@ export const articleEditAsync = (data: Object) => (dispatch: Function) => {
 
 export const articleDeleteAsync = (id: string) => (dispatch: Function) => {
     dispatch(articleGetAsyncRequest(id));
-    return fetch(ARTICLES_PAGE_ROUTE, { method: 'DELETE',
+    return fetch(ARTICLES_PAGE_ROUTE + '/' + id, { method: 'DELETE',
         headers: {
             'Content-type': 'text/plain',
         },
@@ -117,7 +118,7 @@ export const articleDeleteAsync = (id: string) => (dispatch: Function) => {
         })
         .then((data) => {
             if (!data) throw Error('No message received');
-            dispatch(articleGetAsyncSuccess(data));
+            dispatch(articleRemove(id));
             dispatch(articleGetAsyncSuccessStatus());
         })
         .catch(() => {

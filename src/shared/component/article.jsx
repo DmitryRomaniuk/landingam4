@@ -8,9 +8,9 @@ function getMonth(date) {
     return (month === 'Invalid date') ? '' : month;
 }
 
-const Article = ({ title, description, text, avatarUrl, likes, comments, date, author, articleRemoveByNumber, articleEditByNumber, articleFormToggleSwitch, index }: {
-    title: string, description: string, text: string, avatarUrl: string, articleFormToggleSwitch: Function,
-    likes: ?number, comments: ?number, date: number, author: string, articleRemoveByNumber: Function, articleEditByNumber: Function, index: number
+const Article = ({ title, description, text, avatarUrl, likes, comments, date, author, articleDeleteAsync, articleEditAsync, articleEditById, articleFormToggleSwitch, index, id }: {
+    title: string, description: string, text: string, avatarUrl: string, articleFormToggleSwitch: Function, id: string, articleEditById: Function,
+    likes: ?number, comments: ?number, date: number, author: string, articleDeleteAsync: Function, articleEditAsync: Function, index: number
 }) => <div className="article_block_preview_wrapper col-12 col-md-6 col-lg-6 col-xl-4">
   <div className="article_block_preview">
     <div className="article_block_preview_header">
@@ -44,11 +44,11 @@ const Article = ({ title, description, text, avatarUrl, likes, comments, date, a
         className="article_block_edit" data-toggle="modal"
         onClick={() => {
             articleFormToggleSwitch();
-            articleEditByNumber(index);
+            articleEditById(id);
         }}
       >Edit</button>
       <button
-        onClick={() => { articleRemoveByNumber(index); }}
+        onClick={() => { articleDeleteAsync(id); }}
         className="article_block_delete"
         type="button"
         role="button"
