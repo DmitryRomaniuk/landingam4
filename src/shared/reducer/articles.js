@@ -18,6 +18,7 @@ const initialState = Immutable.fromJS({
     listArticles: [],
     status: 'empty',
     modal: false,
+    modalSpinner: false,
     number: 0,
 });
 
@@ -32,13 +33,13 @@ const articlesReducer = (state: Immut = initialState, action: { type: string, pa
     case ARTICLE_REMOVE:
         return state.set('listArticles', state.get('listArticles').delete(action.payload));
     case ARTICLES_GET_ASYNC_REQUEST:
-        return state.set('status', 'Loading...');
+        return state.set(state.get('modalSpinner'), true);
     case ARTICLES_GET_ASYNC_SUCCESS_STATUS:
-        return state.set('status', 'Loaded');
+        return state.set(state.get('modalSpinner'), false);
     case ARTICLES_GET_ASYNC_SUCCESS:
         return state.set('listArticles', Immutable.fromJS(action.payload));
     case ARTICLES_GET_ASYNC_FAILURE:
-        return state.set('status', 'No message received, please check your connection');
+        return state.set(state.get('modalSpinner'), false);
     default:
         return state;
     }

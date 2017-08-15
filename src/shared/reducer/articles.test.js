@@ -21,7 +21,7 @@ let twoArticles;
 
 beforeEach(() => {
     articlesState = articlesReducer(undefined, {});
-    twoArticles =[
+    twoArticles = [
         {
             title: 'a1',
             description: 'a2',
@@ -65,7 +65,7 @@ test('handle ARTICLE_EDIT', () => {
     articlesState = articlesState.set('listArticles', articlesState.get('listArticles').push(...Immutable.fromJS(twoArticles)));
     articlesState = articlesReducer(articlesState, articleEdit(1));
     articlesState = articlesReducer(articlesState, articleAddAction(Immutable.fromJS(twoArticles[0])));
-    expect(articlesState.get('listArticles')).toEqual(Immutable.fromJS([twoArticles[0],twoArticles[0]]));
+    expect(articlesState.get('listArticles')).toEqual(Immutable.fromJS([twoArticles[0], twoArticles[0]]));
 });
 
 test('handle ARTICLE_REMOVE', () => {

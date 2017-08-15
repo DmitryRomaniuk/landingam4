@@ -44,10 +44,8 @@ class Articles extends Component {
             <div className="articles_main row">
               {this.props.articles.map((elem, index) => {
                   const article = Object.assign({}, elem);
-                  // eslint-disable-next-line no-underscore-dangle
-                  delete article._id;
                   return (<Article
-                    key={article.date}
+                    key={article.id}
                     title={article.author}
                     description={article.description}
                     text={article.text}
