@@ -7,14 +7,8 @@ import newsRoute from './routes/news';
 import gamesRoute from './routes/games';
 
 import {
-    homePage,
-    helloEndpoint,
-} from './controller';
-
-import {
     HOME_PAGE_ROUTE,
     LOGIN_ROUTE,
-    helloEndpointRoute,
 } from '../shared/routes';
 
 import renderApp from './render-app';
@@ -35,10 +29,6 @@ export default (app: Object) => {
 
     app.post(LOGIN_ROUTE, (req, res) => {
         res.redirect(HOME_PAGE_ROUTE);
-    });
-
-    app.get(helloEndpointRoute(), (req, res) => {
-        res.json(helloEndpoint(req.params.num));
     });
 
     // eslint-disable-next-line no-unused-vars

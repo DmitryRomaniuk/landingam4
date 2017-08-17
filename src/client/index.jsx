@@ -17,7 +17,6 @@ import './css/style.less';
 
 import App from '../shared/app';
 import { APP_CONTAINER_SELECTOR, JSS_SSR_SELECTOR } from '../shared/config';
-import helloReducer from '../shared/reducer/hello';
 import articlesReducer from '../shared/reducer/articles';
 import gamesReducer from '../shared/reducer/games';
 import trailersReducer from '../shared/reducer/trailers';
@@ -32,7 +31,6 @@ const preloadedState = window.__PRELOADED_STATE__;
 
 const store = createStore(combineReducers(
     {
-        hello: helloReducer,
         articles: articlesReducer,
         games: gamesReducer,
         news: newsReducer,
@@ -40,7 +38,6 @@ const store = createStore(combineReducers(
         form: reduxFormReducer,
     }),
     {
-        hello: Immutable.fromJS(preloadedState.hello),
         articles: Immutable.fromJS(preloadedState.articles),
         games: Immutable.fromJS(preloadedState.games),
         news: Immutable.fromJS(preloadedState.news),

@@ -9,7 +9,7 @@ const LoginPage = () =>
   <div>
     <Helmet
       meta={[
-                { name: 'description', content: 'Hello App is an app to say hello' },
+                { name: 'description', content: 'login page' },
                 { property: 'og:title', content: APP_NAME },
       ]}
     />

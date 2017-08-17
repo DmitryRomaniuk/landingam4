@@ -5,7 +5,6 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { reducer as reduxFormReducer } from 'redux-form';
 
-import helloReducer from '../shared/reducer/hello';
 import articlesReducer from '../shared/reducer/articles';
 import gamesReducer from '../shared/reducer/games';
 import newsReducer from '../shared/reducer/news';
@@ -13,12 +12,6 @@ import trailersReducer from '../shared/reducer/trailers';
 
 const initStore = (plainPartialState: ?Object) => {
     const preloadedState = plainPartialState ? {} : undefined;
-
-    if (plainPartialState && plainPartialState.hello) {
-    // flow-disable-next-line
-        preloadedState.hello = helloReducer(undefined, {})
-      .merge(Immutable.fromJS(plainPartialState.hello));
-    }
 
     if (plainPartialState && plainPartialState.articles) {
         // flow-disable-next-line
@@ -45,7 +38,6 @@ const initStore = (plainPartialState: ?Object) => {
     }
 
     return createStore(combineReducers({
-        hello: helloReducer,
         articles: articlesReducer,
         games: gamesReducer,
         news: newsReducer,
