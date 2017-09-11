@@ -5,7 +5,7 @@ import articlesRoute from './routes/articles';
 import trailersRoute from './routes/trailers';
 import newsRoute from './routes/news';
 import gamesRoute from './routes/games';
-import homePage from './controller';
+import { homePage } from './controller';
 
 import {
     HOME_PAGE_ROUTE,
