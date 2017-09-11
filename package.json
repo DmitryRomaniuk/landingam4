@@ -64,9 +64,7 @@
         "serve-favicon": "~2.4.2",
         "socket.io": "^1.7.3",
         "socket.io-client": "^1.7.3",
-        "tether": "^1.4.0"
-    },
-    "devDependencies": {
+        "tether": "^1.4.0",
         "babel-cli": "^6.23.0",
         "babel-core": "^6.23.1",
         "babel-eslint": "^7.1.1",
@@ -104,5 +102,7 @@
         "url-loader": "^0.5.9",
         "webpack": "^2.2.1",
         "webpack-dev-server": "^2.7.1"
+    },
+    "devDependencies": {
     }
 }
